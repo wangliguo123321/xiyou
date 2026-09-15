@@ -1,0 +1,6 @@
+interface:
+  display_name: "xiyou-wukong"
+  short_description: "悟空·破局：依据源码和证据调查问题，比较可行路线，给出明确推荐与验证办法。"
+  default_prompt: "使用 $xiyou-wukong 处理我接下来提供的任务。"
+policy:
+  allow_implicit_invocation: false

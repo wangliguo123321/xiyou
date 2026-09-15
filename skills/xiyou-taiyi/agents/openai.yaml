@@ -1,0 +1,6 @@
+interface:
+  display_name: "xiyou-taiyi"
+  short_description: "太乙·炼技：评估热门上游技能，炼化现有法器或新增职责明确的人物，并验证效果。"
+  default_prompt: "使用 $xiyou-taiyi 处理我接下来提供的任务。"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,12 @@
+xiyou 衍生说明
+
+本人物包含公开上游的中文翻译和适配。上游原文通过固定提交链接提供，原许可证随技能保留。
+修改日期：2026-09-15。新增角色组织与适配规则不代表上游作者的要求。
+
+mattpocock/skills
+https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/productivity/teach/SKILL.md
+许可证：licenses/teach.txt
+
+anthropics/claude-plugins-official
+https://github.com/anthropics/claude-plugins-official/blob/da823e86c8feef13b73b6712af11eadd38c992f6/plugins/explanatory-output-style/hooks-handlers/session-start.sh
+许可证：licenses/explanatory.txt

@@ -1,0 +1,6 @@
+interface:
+  display_name: "xiyou-shaseng"
+  short_description: "沙僧·善后：核实完成状态，清理本次临时产物，沉淀修改理由、验证证据与接续文档。"
+  default_prompt: "使用 $xiyou-shaseng 处理我接下来提供的任务。"
+policy:
+  allow_implicit_invocation: false

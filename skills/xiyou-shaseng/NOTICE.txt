@@ -1,0 +1,16 @@
+xiyou 衍生说明
+
+本人物包含公开上游的中文翻译和适配。上游原文通过固定提交链接提供，原许可证随技能保留。
+修改日期：2026-09-15。新增角色组织与适配规则不代表上游作者的要求。
+
+mattpocock/skills
+https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa662551015/skills/productivity/handoff/SKILL.md
+许可证：licenses/handoff.txt
+
+affaan-m/everything-claude-code
+https://github.com/affaan-m/everything-claude-code/blob/8321021c54d670126ce3b2969d5deb880b4b0c2a/commands/update-docs.md
+许可证：licenses/update-docs.txt
+
+obra/superpowers
+https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/verification-before-completion/SKILL.md
+许可证：licenses/verification.txt

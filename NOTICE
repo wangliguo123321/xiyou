@@ -1,0 +1,7 @@
+xiyou
+Copyright 2026 xiyou contributors
+
+本项目包含公开 Agent Skills 的中文翻译与适配。
+上游原文通过各人物 references/lineage.md 中的固定提交链接提供。
+对应版权与许可证保留在各人物的 licenses/ 和 NOTICE.txt 中。
+项目新增组织与适配内容采用 Apache License 2.0；上游内容保留其原有许可。

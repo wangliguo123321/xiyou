@@ -1,0 +1,6 @@
+interface:
+  display_name: "xiyou-bajie"
+  short_description: "八戒·省力：审视方案与本次差异，减少过度设计和无关改动，保持修复完整正确。"
+  default_prompt: "使用 $xiyou-bajie 处理我接下来提供的任务。"
+policy:
+  allow_implicit_invocation: false
