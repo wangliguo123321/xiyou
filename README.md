@@ -99,6 +99,8 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 
 它特别关注单次用途的通用框架、没有需求的扩展接口、假设性配置，以及顺手发生的重构、重命名和格式调整。准备添加新能力时，先检查仓库和成熟工具中是否已经存在。
 
+审查时把需求符合性与代码规范分开：既看有没有漏做、做错和额外增加行为，也看是否遵循项目约定。面对“再通用一点”“加个管理器”等评审建议，先核对实际场景和技术依据，再决定采纳、缩小实现或暂缓。
+
 最小改动需要保持修复完整、行为正确和必要验证。学习价值、可靠性和未来反复返工的成本，也要一起考虑。
 
 ```text
@@ -112,6 +114,8 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 它先对照任务目标，确认实际完成了什么，再保留必要证据、清理本次临时产物。只处理归属明确的内容，保留正式交付物、项目需要的测试和文档，以及用户已有工作。
 
 修改记录回答几个关键问题：为什么这样改，为什么选择这个范围，哪些替代路线被放弃，验证到了哪一步，还有什么没有完成。
+
+每份验证证据都对应实际代码状态；同一提交上后来又改过代码，先前的通过结果也可能已经过期。清理会核对产物归属和动态引用，文档保留事实来源与下一步完成条件，分支和工作树的处理只在相应交付任务中进行。
 
 完成、暂停、失败和受阻都可以有清楚的收尾。文档保存到用户指定的位置；默认使用项目外的个人文档目录。
 
@@ -162,11 +166,11 @@ xiyou 从已有的优秀方法出发，保留有用的流程，再针对角色�
 | 唐僧 | Anthropic 解释式教学、Matt Pocock `teach` |
 | 悟空 | Superpowers `brainstorming`、`systematic-debugging` |
 | 哪吒 | ECC `iterative-retrieval`、`code-explorer` |
-| 八戒 | Anthropic `code-simplifier`、ECC `search-first` |
-| 沙僧 | Matt Pocock `handoff`、Superpowers 完成验证、ECC 文档同步 |
+| 八戒 | Anthropic 代码简化、ECC 复用优先、Matt Pocock 双轴审查、Superpowers 评审建议核验、gstack 范围保持与缩减 |
+| 沙僧 | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证 |
 | 太乙 | Vercel `find-skills`、Anthropic `skill-creator`、ECC 技能盘点 |
 
-感谢 [Superpowers](https://github.com/obra/superpowers)、[Matt Pocock Skills](https://github.com/mattpocock/skills)、[ECC](https://github.com/affaan-m/everything-claude-code)、[Anthropic Skills](https://github.com/anthropics/skills)、[Anthropic 官方插件库](https://github.com/anthropics/claude-plugins-official) 和 [Vercel Skills](https://github.com/vercel-labs/skills)。各人物目录中的上游致谢提供具体文件、固定版本与许可证。
+感谢 [Superpowers](https://github.com/obra/superpowers)、[Matt Pocock Skills](https://github.com/mattpocock/skills)、[ECC](https://github.com/affaan-m/everything-claude-code)、[Anthropic Skills](https://github.com/anthropics/skills)、[Anthropic 官方插件库](https://github.com/anthropics/claude-plugins-official)、[Vercel Skills](https://github.com/vercel-labs/skills) 和 [gstack](https://github.com/garrytan/gstack)。各人物目录中的上游致谢提供具体文件、固定版本与许可证。
 
 ## 一起完善 xiyou
 

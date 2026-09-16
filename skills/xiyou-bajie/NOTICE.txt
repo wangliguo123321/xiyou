@@ -1,7 +1,7 @@
 xiyou 衍生说明
 
 本人物包含公开上游的中文翻译和适配。上游原文通过固定提交链接提供，原许可证随技能保留。
-修改日期：2026-09-15。新增角色组织与适配规则不代表上游作者的要求。
+修改日期：2026-09-16。新增角色组织与适配规则不代表上游作者的要求。
 
 anthropics/claude-plugins-official
 https://github.com/anthropics/claude-plugins-official/blob/da823e86c8feef13b73b6712af11eadd38c992f6/plugins/code-simplifier/agents/code-simplifier.md
@@ -10,3 +10,15 @@ https://github.com/anthropics/claude-plugins-official/blob/da823e86c8feef13b73b6
 affaan-m/everything-claude-code
 https://github.com/affaan-m/everything-claude-code/blob/8321021c54d670126ce3b2969d5deb880b4b0c2a/skills/search-first/SKILL.md
 许可证：licenses/search-first.txt
+
+mattpocock/skills
+https://github.com/mattpocock/skills/blob/959a8e9f1edc3adbe2f7e3054bb6fbefa6696260/skills/engineering/code-review/SKILL.md
+许可证：licenses/code-review.txt
+
+obra/superpowers
+https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/receiving-code-review/SKILL.md
+许可证：licenses/receiving-review.txt
+
+garrytan/gstack（仅范围保持与缩减部分）
+https://github.com/garrytan/gstack/blob/a6b3a57512ca6d5c6aa5b68f74f736195021f96e/plan-ceo-review/SKILL.md.tmpl
+许可证：licenses/scope-review.txt
