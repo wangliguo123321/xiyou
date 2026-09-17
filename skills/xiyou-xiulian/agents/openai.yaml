@@ -1,0 +1,4 @@
+interface:
+  display_name: "xiyou-xiulian"
+  short_description: "修炼法器·提示词增强：保留原意与约束，把粗略需求变成清楚、可执行的提示词。"
+  default_prompt: "使用 $xiyou-xiulian 增强我接下来提供的提示词，保留原意和约束，给出可复制的版本。"

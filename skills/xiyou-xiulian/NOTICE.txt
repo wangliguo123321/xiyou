@@ -1,0 +1,16 @@
+xiyou-xiulian 衍生说明
+
+本技能采用以下 MIT 上游的工作方法并作中文重写与适配。
+修改日期：2026-09-17。新增场景、调用边界和示例由 xiyou 项目维护，不代表上游作者的要求。
+
+talki-io/prompt-optimizer
+Copyright (c) 2026 talki-io
+https://github.com/talki-io/prompt-optimizer/blob/5d47a19aa53e6976b7f288d3ec4a6f1e2a1ed197/SKILL.md
+许可证：licenses/prompt-optimizer.txt
+
+msimchowitz/writing-skills
+Copyright (c) 2026 Max Simchowitz
+https://github.com/msimchowitz/writing-skills/blob/214981fe02326f27b0fc8790d00eb4b731607073/for-agents/prompt-improving/SKILL.md
+许可证：licenses/prompt-improving.txt
+
+linshenkx/prompt-optimizer 和 DSPy 仅列为调研对比，没有纳入其代码或模板。

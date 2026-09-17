@@ -1,6 +1,6 @@
 interface:
   display_name: "xiyou"
-  short_description: "xiyou总入口：启用全队能力，按任务选择人物，复用证据并整合结果。"
-  default_prompt: "使用 $xiyou 按任务需要安排西游人物协作。"
+  short_description: "xiyou总入口：按任务需要选择西游人物与法器，复用证据并整合结果。"
+  default_prompt: "使用 $xiyou 按任务需要选择西游人物与法器。"
 policy:
   allow_implicit_invocation: false

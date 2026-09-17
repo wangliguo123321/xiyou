@@ -2,7 +2,7 @@
 
 **以西游人物组织 AI 编程能力，让问题讲得明白、方案选得有据、改动保持克制、工作收得完整。**
 
-xiyou 是一组中文 Agent Skills。它以成熟开源技能为基础，把日常研发中不同的工作方式交给六个各有所长的人物。你可以点名一位，也可以把任务交给 `/xiyou`，让它按需要分工。
+xiyou 是一组中文 Agent Skills。它以成熟开源技能为基础，把日常研发中不同的工作方式交给六个各有所长的人物，也提供可以单独取用的法器。你可以点名使用，也可以把任务交给 `/xiyou`，让它按需要分工。
 
 ## 为什么做 xiyou
 
@@ -39,9 +39,9 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 
 </details>
 
-在支持 Skill 斜杠菜单的客户端中，输入 `/xiyou` 筛选总入口和各个人物，再选择使用。Codex 终端／IDE 也可以用 `$xiyou`、`$xiyou-wukong` 等方式引用。具体菜单形式由客户端决定。
+在支持 Skill 斜杠菜单的客户端中，输入 `/xiyou` 筛选总入口、人物和法器，再选择使用。Codex 终端／IDE 也可以用 `$xiyou`、`$xiyou-wukong`、`$xiyou-xiulian` 等方式引用。具体菜单形式由客户端决定。
 
-| 入口 | 人物 | 什么时候用 |
+| 入口 | 人物与法器 | 什么时候用 |
 |---|---|---|
 | `/xiyou` | 全队入口 | 交给它一个任务，按需要安排人物协作 |
 | `/xiyou-tangseng` | 唐僧·明理 | 想把业务、代码来由和排查方法真正弄懂 |
@@ -50,6 +50,7 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 | `/xiyou-bajie` | 八戒·省力 | 防止过度设计，检查本次改动能否更小、更直接 |
 | `/xiyou-shaseng` | 沙僧·善后 | 清理本次临时产物，记录修改思路和接续事项 |
 | `/xiyou-taiyi` | 太乙·炼技 | 发现了一个好 Skill，想吸收进现有人物或新增人物 |
+| `/xiyou-xiulian` | 法器·修炼 | 把粗略需求或已有提示词改写清楚，保留原意和约束 |
 
 ## 六个人物，六种做事方式
 
@@ -145,6 +146,24 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 /xiyou-taiyi 评估这个 Skill；合适就炼化给现有人物，必要时新增职责清楚的人物。
 ```
 
+## 法器：按需取用的能力
+
+法器解决具体问题，可以单独调用，也可以配合人物使用。它们沿用 `/xiyou-*` 的命名方式，后续有适合独立使用的方法，也会继续收录在这里。
+
+### 修炼·提示词增强：先把想做的事说清楚
+
+取“修炼”反复打磨、去粗存精的意思，把一时说不清的需求，整理成目标明确、约束清楚、结果可以判断的提示词。
+
+修炼先理清你真正想完成什么，再利用相关上下文补清表达。技术名称、命令、数值和原有要求会保留；缺少的事实会明确留下空位，不擅自添加功能或替你决定方案。
+
+可以从一句粗略需求开始，也可以拿已有提示词继续打磨。觉得太长、重点不对，或上一次回答偏离了预期，都可以带着反馈再炼一次。
+
+默认交付可复制的增强稿。明确要求“增强后直接执行”时，才接着完成原任务。
+
+```text
+/xiyou-xiulian 帮我增强这段提示词：排查登录失败的原因，先不要改代码。
+```
+
 ## 为什么采用“人物 + 法器”
 
 人物提供稳定的职责，法器提供具体的工作方法。
@@ -161,22 +180,25 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 
 xiyou 从已有的优秀方法出发，保留有用的流程，再针对角色分工、中文表达和日常使用作适配。
 
-| 人物 | 主要基础 |
+| 技能与来源记录 | 主要基础 |
 |---|---|
-| 唐僧 | Anthropic 解释式教学、Matt Pocock `teach` |
-| 悟空 | Superpowers `brainstorming`、`systematic-debugging` |
-| 哪吒 | ECC `iterative-retrieval`、`code-explorer` |
-| 八戒 | Anthropic 代码简化、ECC 复用优先、Matt Pocock 双轴审查、Superpowers 评审建议核验、gstack 范围保持与缩减 |
-| 沙僧 | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证 |
-| 太乙 | Vercel `find-skills`、Anthropic `skill-creator`、ECC 技能盘点 |
+| [唐僧](skills/xiyou-tangseng/references/lineage.md) | Anthropic 解释式教学、Matt Pocock `teach` |
+| [悟空](skills/xiyou-wukong/references/lineage.md) | Superpowers `brainstorming`、`systematic-debugging` |
+| [哪吒](skills/xiyou-nezha/references/lineage.md) | ECC `iterative-retrieval`、`code-explorer` |
+| [八戒](skills/xiyou-bajie/references/lineage.md) | Anthropic 代码简化、ECC 复用优先、Matt Pocock 双轴审查、Superpowers 评审建议核验、gstack 范围保持与缩减 |
+| [沙僧](skills/xiyou-shaseng/references/lineage.md) | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证 |
+| [太乙](skills/xiyou-taiyi/references/lineage.md) | Vercel `find-skills`、Anthropic `skill-creator`、ECC 技能盘点 |
+| [修炼（法器）](skills/xiyou-xiulian/references/lineage.md) | talki `prompt-optimizer` 的保真改写、Max Simchowitz `prompt-improving` 的上下文澄清（均为 MIT 许可） |
 
-感谢 [Superpowers](https://github.com/obra/superpowers)、[Matt Pocock Skills](https://github.com/mattpocock/skills)、[ECC](https://github.com/affaan-m/everything-claude-code)、[Anthropic Skills](https://github.com/anthropics/skills)、[Anthropic 官方插件库](https://github.com/anthropics/claude-plugins-official)、[Vercel Skills](https://github.com/vercel-labs/skills) 和 [gstack](https://github.com/garrytan/gstack)。各人物目录中的上游致谢提供具体文件、固定版本与许可证。
+感谢 [Superpowers](https://github.com/obra/superpowers)、[Matt Pocock Skills](https://github.com/mattpocock/skills)、[ECC](https://github.com/affaan-m/everything-claude-code)、[Anthropic Skills](https://github.com/anthropics/skills)、[Anthropic 官方插件库](https://github.com/anthropics/claude-plugins-official)、[Vercel Skills](https://github.com/vercel-labs/skills)、[gstack](https://github.com/garrytan/gstack)、[talki Prompt Optimizer](https://github.com/talki-io/prompt-optimizer) 和 [Max Simchowitz Prompt Improving](https://github.com/msimchowitz/writing-skills/tree/main/for-agents/prompt-improving)。各技能目录中的上游致谢提供具体文件、固定版本、适配说明与许可证。
 
 ## 一起完善 xiyou
 
 欢迎通过 [Issue](https://github.com/wangliguo123321/xiyou/issues) 分享使用反馈、反复出现的痛点或值得吸收的 Skill，也欢迎提交 PR。
 
-一次好的改进，最好能说清：遇到了什么问题，基于哪个上游，改了什么，以及用什么真实场景确认它有帮助。优先完善已有角色；新增人物时说明它独立的职责与边界。
+一次好的改进，最好能说清：遇到了什么问题，基于哪个上游，改了什么，以及用什么真实场景确认它有帮助。优先完善已有能力；新增人物或法器时说明它的用途与边界。
+
+采用开源方法时，同步维护 README 和技能目录中的来源、适配说明与许可证，让后续改进有据可循。
 
 GitHub 中的改进经合并后成为共享版本。已经安装到电脑里的副本需要再更新一次，你可以直接告诉 AI：
 
@@ -184,7 +206,7 @@ GitHub 中的改进经合并后成为共享版本。已经安装到电脑里的�
 请从 https://github.com/wangliguo123321/xiyou 更新我已安装的 xiyou，先保留并检查本地改动。
 ```
 
-日常使用只需要记住人物入口。源码、差异和社区协作交给 GitHub 与现成工具，不需要额外的维护命令。
+日常使用只需要记住人物和法器的入口。源码、差异和社区协作交给 GitHub 与现成工具，不需要额外的维护命令。
 
 ## 许可
 
