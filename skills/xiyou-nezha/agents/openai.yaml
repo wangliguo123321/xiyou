@@ -1,6 +1,6 @@
 interface:
   display_name: "xiyou-nezha"
-  short_description: "哪吒·速断：围绕一个明确疑问快速检索和定位，简洁给出结论、依据与必要缺口。"
+  short_description: "哪吒·速断：快速定位，结论或下一动作优先，给出依据与必要缺口。"
   default_prompt: "使用 $xiyou-nezha 处理我接下来提供的任务。"
 policy:
   allow_implicit_invocation: false

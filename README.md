@@ -88,6 +88,8 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 
 快答仍然保留必要条件。证据不足时，说明已经确定的部分和最小缺口，不把猜测压缩成一个肯定答案。
 
+“混天绫”把结论或下一动作放到第一行，多步任务说明当前状态，失败原因按证据强度表达。长列表可以分组和排序，但不会为了显得简短漏掉审计、检索或完整清单中的相关发现。
+
 ```text
 /xiyou-nezha 这个空值分支会清空旧数据吗？给结论和代码依据。
 ```
@@ -184,13 +186,13 @@ xiyou 从已有的优秀方法出发，保留有用的流程，再针对角色�
 |---|---|
 | [唐僧](skills/xiyou-tangseng/references/lineage.md) | Anthropic 解释式教学、Matt Pocock `teach` |
 | [悟空](skills/xiyou-wukong/references/lineage.md) | Superpowers `brainstorming`、`systematic-debugging` |
-| [哪吒](skills/xiyou-nezha/references/lineage.md) | ECC `iterative-retrieval`、`code-explorer` |
+| [哪吒](skills/xiyou-nezha/references/lineage.md) | ECC `iterative-retrieval`、`code-explorer`；`i-have-adhd` 的行动优先表达 |
 | [八戒](skills/xiyou-bajie/references/lineage.md) | Anthropic 代码简化、ECC 复用优先、Matt Pocock 双轴审查、Superpowers 评审建议核验、gstack 范围保持与缩减 |
 | [沙僧](skills/xiyou-shaseng/references/lineage.md) | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证 |
 | [太乙](skills/xiyou-taiyi/references/lineage.md) | Vercel `find-skills`、Anthropic `skill-creator`、ECC 技能盘点 |
 | [修炼（法器）](skills/xiyou-xiulian/references/lineage.md) | talki `prompt-optimizer` 的保真改写、Max Simchowitz `prompt-improving` 的上下文澄清（均为 MIT 许可） |
 
-感谢 [Superpowers](https://github.com/obra/superpowers)、[Matt Pocock Skills](https://github.com/mattpocock/skills)、[ECC](https://github.com/affaan-m/everything-claude-code)、[Anthropic Skills](https://github.com/anthropics/skills)、[Anthropic 官方插件库](https://github.com/anthropics/claude-plugins-official)、[Vercel Skills](https://github.com/vercel-labs/skills)、[gstack](https://github.com/garrytan/gstack)、[talki Prompt Optimizer](https://github.com/talki-io/prompt-optimizer) 和 [Max Simchowitz Prompt Improving](https://github.com/msimchowitz/writing-skills/tree/main/for-agents/prompt-improving)。各技能目录中的上游致谢提供具体文件、固定版本、适配说明与许可证。
+感谢 [Superpowers](https://github.com/obra/superpowers)、[Matt Pocock Skills](https://github.com/mattpocock/skills)、[ECC](https://github.com/affaan-m/everything-claude-code)、[Anthropic Skills](https://github.com/anthropics/skills)、[Anthropic 官方插件库](https://github.com/anthropics/claude-plugins-official)、[Vercel Skills](https://github.com/vercel-labs/skills)、[gstack](https://github.com/garrytan/gstack)、[i-have-adhd](https://github.com/ayghri/i-have-adhd)、[talki Prompt Optimizer](https://github.com/talki-io/prompt-optimizer) 和 [Max Simchowitz Prompt Improving](https://github.com/msimchowitz/writing-skills/tree/main/for-agents/prompt-improving)。各技能目录中的上游致谢提供具体文件、固定版本、适配说明与许可证。
 
 ## 一起完善 xiyou
 
