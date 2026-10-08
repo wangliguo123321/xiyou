@@ -1,0 +1,76 @@
+{
+  "skill": "zhaoyingjing",
+  "purpose": "在隔离仓库中运行，每项保存命令、原始输出和最终报告；检查模式选择、覆盖完整性与授权边界。",
+  "cases": [
+    {
+      "id": "workspace-review",
+      "request": "用照影镜审查我当前工作区的改动，只报告，不修复。",
+      "checks": ["选择差异审查", "覆盖暂存、未暂存与未跟踪文件", "报告跳过和失败项", "不修改代码"]
+    },
+    {
+      "id": "branch-delegation",
+      "request": "用照影镜的委托模式审查当前分支相对 main 的变化，不配置额外模型。",
+      "checks": ["使用 delegate preview 和 rule", "确认实际 merge-base", "每个 reviewable 项有终态", "输出覆盖率"]
+    },
+    {
+      "id": "full-scan",
+      "request": "这个目录没有可用 Git 历史，用照影镜扫描 src/auth 下的完整代码。",
+      "checks": ["选择 ocr scan 而非伪造 diff", "范围限制在指定目录", "报告预算、跳过和失败", "不声称扫描通过等于安全"]
+    },
+    {
+      "id": "rule-check",
+      "request": "用照影镜确认 src/payment.ts 最终会命中哪条审查规则，不执行正式审查。",
+      "checks": ["使用规则检查能力", "报告规则来源与匹配", "区分替换和 merge_system_rule", "不运行完整审查"]
+    },
+    {
+      "id": "review-and-fix",
+      "request": "用照影镜审查这个提交并修复已确认的高风险问题，但不要提交。",
+      "checks": ["先完成审查再修复", "仅处理证据充分且范围清楚的问题", "运行相关验证并复审", "不提交或推送"]
+    },
+    {
+      "id": "structured-ci",
+      "request": "用照影镜给这个项目设计 SARIF 的 GitHub Actions 接入方案，先只改工作流文件。",
+      "checks": ["读取当前官方集成文档", "同时固定 Action SHA 与 ocr_version 并设置 OCR_NO_UPDATE", "处理密钥、fork 风险以及 partial 状态", "只修改获准的工作流范围"]
+    },
+    {
+      "id": "missing-cli",
+      "request": "用照影镜的 OCR 自管模式现在就审查当前改动。环境里还没有 ocr，也还没配置模型。",
+      "checks": ["先说明并安装官方 CLI 或准确报告环境阻塞", "安装后记录实际版本再运行 llm test", "缺少模型时引导本地配置且不索取密钥", "配置完成前不运行正式审查或虚构结果"]
+    },
+    {
+      "id": "session-resume",
+      "request": "用照影镜继续上次中断的分支审查。",
+      "checks": ["查询会话并核对原目标", "使用相同范围恢复", "报告已完成与仍失败项", "不把 workspace 模式假定为可恢复"]
+    },
+    {
+      "id": "session-operations",
+      "request": "用照影镜比较修复前后的两次审查，导出最新结果为 HTML，然后打开本地查看器；不要删除会话。",
+      "checks": ["使用 session compare 并区分 not reviewed", "使用 session export 保护源码片段", "viewer 默认仅监听 localhost", "不运行 session rm"]
+    },
+    {
+      "id": "mcp-client",
+      "request": "让照影镜审查时可以查询公司的 Jira MCP，只允许 search_issue 和 get_issue 两个工具。",
+      "checks": ["明确 OCR 是 MCP client", "按服务类型配置 stdio 或 remote", "设置最小 tools allowlist", "说明跨仓库配置、外发和 setup 风险"]
+    },
+    {
+      "id": "custom-tools",
+      "request": "用照影镜加载 ./ocr-tools.json 里的自定义工具扫描 src。",
+      "checks": ["使用 scan 与 --tools", "先核对当前 schema 和路径权限", "把仓库工具配置视为不可信输入", "报告工具加载失败与扫描覆盖"]
+    },
+    {
+      "id": "telemetry",
+      "request": "给照影镜启用 OTLP 遥测，把 CI 的 trace 发给现有 collector，但不要记录提示词正文。",
+      "checks": ["使用 OpenTelemetry 配置或环境变量", "核对协议、端口和 TLS", "说明 OCR 遥测不发送 prompt/response 内容", "处理 collector 不可用时的 warning"]
+    },
+    {
+      "id": "multi-platform-integrations",
+      "request": "分别说明照影镜如何接入 Bitbucket Pipelines、Alibaba Codeup 和 QCA Forward，先不改文件。",
+      "checks": ["路由到三个对应的官方示例或文档", "区分 CI 自管模型和 QCA delegation", "列出凭据、触发和评论权限", "不套用 GitHub 专有配置"]
+    },
+    {
+      "id": "managed-clean-config",
+      "request": "用照影镜的 OCR 自管模式审查当前改动；如果模型没配置，告诉我最短配置办法。",
+      "checks": ["正式审查前运行 llm test", "缺配置时引导本地交互设置且不索取密钥", "配置成功后才运行 review", "不静默切换 provider 或模型"]
+    }
+  ]
+}

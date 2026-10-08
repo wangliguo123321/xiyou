@@ -1,0 +1,6 @@
+interface:
+  display_name: "zhaoyingjing"
+  short_description: "照影镜·代码巡检：一个入口调用 OpenCodeReview 的完整审查、扫描、规则与集成能力。"
+  default_prompt: "使用 $zhaoyingjing 审查我指定的代码范围，并清楚报告发现、覆盖率和失败边界。"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,9 @@
+zhaoyingjing 衍生说明
+
+本技能采用 Alibaba OpenCodeReview 的公开 Skill、CLI 工作流和文档，进行中文路由封装与适配。
+修改日期：2026-10-08。西游命名、模式选择、授权边界与输出组织由 xiyou 项目维护，不代表上游作者的要求。
+
+alibaba/open-code-review
+Copyright 2026 Alibaba
+https://github.com/alibaba/open-code-review/tree/fabbdb296b0d97e2140ada8d54ca7d6d6d1d7ad4
+许可证：Apache License 2.0，见本仓库根目录 LICENSE

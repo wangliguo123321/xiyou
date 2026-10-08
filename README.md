@@ -39,7 +39,7 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 
 </details>
 
-在支持 Skill 斜杠菜单的客户端中，输入 `/xiyou` 筛选总入口、人物和法器，再选择使用。Codex 终端／IDE 也可以用 `$xiyou`、`$xiyou-wukong`、`$xiyou-xiulian` 等方式引用。具体菜单形式由客户端决定。
+在支持 Skill 斜杠菜单的客户端中，输入 `/xiyou` 筛选总入口、人物和常规法器；代码巡检可直接记 `/zhaoyingjing`。Codex 终端／IDE 也可以用 `$xiyou`、`$xiyou-wukong`、`$xiyou-xiulian`、`$zhaoyingjing` 等方式引用。具体菜单形式由客户端决定。
 
 | 入口 | 人物与法器 | 什么时候用 |
 |---|---|---|
@@ -51,6 +51,7 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 | `/xiyou-shaseng` | 沙僧·善后 | 清理本次临时产物，记录修改思路和接续事项 |
 | `/xiyou-taiyi` | 太乙·炼技 | 发现了一个好 Skill，想吸收进现有人物或新增人物 |
 | `/xiyou-xiulian` | 法器·修炼 | 把粗略需求或已有提示词改写清楚，保留原意和约束 |
+| `/zhaoyingjing` | 法器·照影镜 | 用一个入口审查差异、扫描代码、管理规则或接入 OpenCodeReview |
 
 ## 六个人物，六种做事方式
 
@@ -150,7 +151,7 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 
 ## 法器：按需取用的能力
 
-法器解决具体问题，可以单独调用，也可以配合人物使用。它们沿用 `/xiyou-*` 的命名方式，后续有适合独立使用的方法，也会继续收录在这里。
+法器解决具体问题，可以单独调用，也可以配合人物使用。通常沿用 `/xiyou-*` 命名；用户需要特别好记的独立入口时可以保留短名，例如 `/zhaoyingjing`。后续有适合独立使用的方法，也会继续收录在这里。
 
 ### 修炼·提示词增强：先把想做的事说清楚
 
@@ -164,6 +165,16 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 
 ```text
 /xiyou-xiulian 帮我增强这段提示词：排查登录失败的原因，先不要改代码。
+```
+
+### 照影镜·代码巡检：把完整审查能力收进一个入口
+
+照影镜封装 [Alibaba OpenCodeReview](https://github.com/alibaba/open-code-review) 的完整能力。你只需要说明审查对象和目的，不必记住 CLI 参数：它会在工作区、提交、分支差异、完整文件扫描、委托模式、自管模型、规则检查、会话恢复、JSON/SARIF 与 CI 集成之间选择合适入口。
+
+审查结果会说明实际覆盖了哪些文件、跳过或失败了哪些部分，并把发现定位到代码行。普通审查只报告；明确要求修复时才修改代码，提交和推送仍分别处理。
+
+```text
+/zhaoyingjing 审查当前分支相对 main 的改动，并修复已确认的高风险问题，不要提交。
 ```
 
 ## 为什么采用“人物 + 法器”
@@ -191,8 +202,9 @@ xiyou 从已有的优秀方法出发，保留有用的流程，再针对角色�
 | [沙僧](skills/xiyou-shaseng/references/lineage.md) | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证 |
 | [太乙](skills/xiyou-taiyi/references/lineage.md) | Vercel `find-skills`、Anthropic `skill-creator`、ECC 技能盘点 |
 | [修炼（法器）](skills/xiyou-xiulian/references/lineage.md) | talki `prompt-optimizer` 的保真改写、Max Simchowitz `prompt-improving` 的上下文澄清（均为 MIT 许可） |
+| [照影镜（法器）](skills/zhaoyingjing/references/lineage.md) | Alibaba OpenCodeReview 的差异审查、全量扫描、委托模式、规则、会话与集成能力（Apache-2.0） |
 
-感谢 [Superpowers](https://github.com/obra/superpowers)、[Matt Pocock Skills](https://github.com/mattpocock/skills)、[ECC](https://github.com/affaan-m/everything-claude-code)、[Anthropic Skills](https://github.com/anthropics/skills)、[Anthropic 官方插件库](https://github.com/anthropics/claude-plugins-official)、[Vercel Skills](https://github.com/vercel-labs/skills)、[gstack](https://github.com/garrytan/gstack)、[i-have-adhd](https://github.com/ayghri/i-have-adhd)、[talki Prompt Optimizer](https://github.com/talki-io/prompt-optimizer) 和 [Max Simchowitz Prompt Improving](https://github.com/msimchowitz/writing-skills/tree/main/for-agents/prompt-improving)。各技能目录中的上游致谢提供具体文件、固定版本、适配说明与许可证。
+感谢 [Superpowers](https://github.com/obra/superpowers)、[Matt Pocock Skills](https://github.com/mattpocock/skills)、[ECC](https://github.com/affaan-m/everything-claude-code)、[Anthropic Skills](https://github.com/anthropics/skills)、[Anthropic 官方插件库](https://github.com/anthropics/claude-plugins-official)、[Vercel Skills](https://github.com/vercel-labs/skills)、[gstack](https://github.com/garrytan/gstack)、[i-have-adhd](https://github.com/ayghri/i-have-adhd)、[talki Prompt Optimizer](https://github.com/talki-io/prompt-optimizer)、[Max Simchowitz Prompt Improving](https://github.com/msimchowitz/writing-skills/tree/main/for-agents/prompt-improving) 和 [Alibaba OpenCodeReview](https://github.com/alibaba/open-code-review)。各技能目录中的上游致谢提供具体文件、固定版本、适配说明与许可证。
 
 ## 一起完善 xiyou
 
