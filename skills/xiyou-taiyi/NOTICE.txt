@@ -19,3 +19,10 @@ alchaincyf/darwin-skill（花叔）
 https://github.com/alchaincyf/darwin-skill/blob/8a8b66258e3c45d6ae4aea39719468c6428fcb0a/SKILL.md
 许可证：licenses/darwin.txt
 适配：匿名成对比较、有收益才保留及有界优化；具体取舍见 references/lineage.md。
+
+anthropics/skills（评测结果契约与统计思想）
+固定版本：dbd4588f9e1033efb41dad4bef2f7947c8993d44
+https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/references/schemas.md
+https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/scripts/aggregate_benchmark.py
+许可证：licenses/skill-creator.txt（Apache-2.0，Copyright 2026 Anthropic, PBC.）
+2026-10-22 改动：独立编写纯数据校验与配对统计辅助，使用 xiyou 输入契约；不执行上游代码，不声明原 viewer 兼容性。具体取舍见 references/lineage.md。
