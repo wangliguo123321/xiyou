@@ -1,7 +1,7 @@
 xiyou 衍生说明
 
 本人物包含公开上游的中文翻译和适配。上游原文通过固定提交链接提供，原许可证随技能保留。
-修改日期：2026-09-15。新增角色组织与适配规则不代表上游作者的要求。
+修改日期：2026-10-22。新增角色组织与适配规则不代表上游作者的要求。
 
 anthropics/skills
 https://github.com/anthropics/skills/blob/34040c9c568585f6929bedeaad110ad08f079624/skills/skill-creator/SKILL.md
@@ -14,3 +14,8 @@ https://github.com/affaan-m/everything-claude-code/blob/8321021c54d670126ce3b296
 vercel-labs/skills
 https://github.com/vercel-labs/skills/blob/d6b37f62ae23c3825b0ed16c73e123eee0a41fdc/skills/find-skills/SKILL.md
 许可证：licenses/find-skills.txt
+
+alchaincyf/darwin-skill（花叔）
+https://github.com/alchaincyf/darwin-skill/blob/8a8b66258e3c45d6ae4aea39719468c6428fcb0a/SKILL.md
+许可证：licenses/darwin.txt
+适配：匿名成对比较、有收益才保留及有界优化；具体取舍见 references/lineage.md。
