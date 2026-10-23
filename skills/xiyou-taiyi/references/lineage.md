@@ -9,6 +9,13 @@
 | [find-skills](find-skills.md) | [vercel-labs/skills / skills/find-skills/SKILL.md](https://github.com/vercel-labs/skills/blob/d6b37f62ae23c3825b0ed16c73e123eee0a41fdc/skills/find-skills/SKILL.md) | [MIT](../licenses/find-skills.txt) |
 | [创建与评测中的有界优化](skill-creator.md) | [alchaincyf/darwin-skill / SKILL.md](https://github.com/alchaincyf/darwin-skill/blob/8a8b66258e3c45d6ae4aea39719468c6428fcb0a/SKILL.md) | [MIT](../licenses/darwin.txt) |
 | [评测结果契约与汇总](evaluation-results.md) | [anthropics/skills / references/schemas.md](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/references/schemas.md)、[scripts/aggregate_benchmark.py](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/scripts/aggregate_benchmark.py) | [Apache-2.0](../licenses/skill-creator.txt) |
+| [只读取源](source-inspection.md) | [openai/skills / skill-installer](https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer/SKILL.md)、[github_utils.py](https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer/scripts/github_utils.py) | [Apache-2.0](../licenses/skill-installer.txt) |
+
+## 只读取源适配取舍
+
+- 2026-10-23 适配 OpenAI skill-installer 的显式 repo/ref/path、GitHub API 请求及既有令牌环境方法，新增 `scripts/inspect_source.py`；先固定完整提交，再对明确文件核字节与 blob，输出可复核 JSON。
+- 不采用上游的默认安装目录、ZIP 解压、git 回退、复制或覆盖技能；不执行上游脚本。正文只作待核数据，许可路径与必要引用由调用者明确指定，采用判断及独立验收不变。
+- 官方目录分发与维护记录支持来源可追溯，不等于本辅助的效果证据；本地实际调用与错误边界须单独验证。不声明兼容上游安装器或自动完成作者、许可与成熟度审核。
 
 ## 评测结果适配取舍
 

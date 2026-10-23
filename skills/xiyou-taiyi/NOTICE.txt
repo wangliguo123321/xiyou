@@ -3,6 +3,8 @@ xiyou 衍生说明
 本人物包含公开上游的中文翻译和适配。上游原文通过固定提交链接提供，原许可证随技能保留。
 修改日期：2026-10-22。新增角色组织与适配规则不代表上游作者的要求。
 
+2026-10-23 新增只读取源适配；既有上游适配范围不变。
+
 anthropics/skills
 https://github.com/anthropics/skills/blob/34040c9c568585f6929bedeaad110ad08f079624/skills/skill-creator/SKILL.md
 许可证：licenses/skill-creator.txt
@@ -26,3 +28,11 @@ https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d
 https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/scripts/aggregate_benchmark.py
 许可证：licenses/skill-creator.txt（Apache-2.0，Copyright 2026 Anthropic, PBC.）
 2026-10-22 改动：独立编写纯数据校验与配对统计辅助，使用 xiyou 输入契约；不执行上游代码，不声明原 viewer 兼容性。具体取舍见 references/lineage.md。
+
+openai/skills（OpenAI 维护的 skill-installer）
+固定版本：49f948faa9258a0c61caceaf225e179651397431
+https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer/SKILL.md
+https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer/scripts/github_utils.py
+https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer/scripts/install-skill-from-github.py
+许可证：licenses/skill-installer.txt（目录 Apache-2.0 原文）
+改动：适配只读 GitHub 请求与显式取源方法，新增提交固定、字节核验及 JSON 产物；未采用安装、解压、git 回退或覆盖。具体取舍见 references/lineage.md。
