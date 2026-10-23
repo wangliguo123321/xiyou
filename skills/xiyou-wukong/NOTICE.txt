@@ -10,3 +10,11 @@ https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a779
 obra/superpowers
 https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/systematic-debugging/SKILL.md
 许可证：licenses/debugging.txt
+
+openai/skills gh-fix-ci（retired-source）
+固定原文：https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-fix-ci/SKILL.md
+固定脚本：https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-fix-ci/scripts/inspect_pr_checks.py
+固定许可：https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-fix-ci/LICENSE.txt
+许可证：licenses/gh-fix-ci.txt（完整 Apache-2.0，保留原附录模板）
+修改日期：2026-10-24。中文说明及脚本改写保留检查→Actions 元数据/日志→片段和外部 CI 边界，新增显式身份、稳定 JSON、状态区分、超时/字节限量及按 job 取证。
+旧源已退休；新插件未发现同名脚本，不能称为其当前迁移版。源分发层级核验未发现额外 NOTICE；上游贡献记录包括 lukeqin-oai 和 Vaibhav Srivastav（vb-openai），不代表当前专属维护人。

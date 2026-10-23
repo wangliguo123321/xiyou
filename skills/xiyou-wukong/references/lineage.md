@@ -6,3 +6,6 @@
 |---|---|---|
 | [brainstorming](brainstorming.md) | [obra/superpowers / skills/brainstorming/SKILL.md](https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/brainstorming/SKILL.md) | [MIT](../licenses/brainstorming.txt) |
 | [debugging](debugging.md) | [obra/superpowers / skills/systematic-debugging/SKILL.md](https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/systematic-debugging/SKILL.md) | [MIT](../licenses/debugging.txt) |
+| [GitHub CI 上下文](github-ci.md) | [openai/skills / skills/.curated/gh-fix-ci/SKILL.md](https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-fix-ci/SKILL.md)（retired-source） | [Apache-2.0](../licenses/gh-fix-ci.txt) |
+
+CI 适配另参考同提交的 [inspect_pr_checks.py](https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-fix-ci/scripts/inspect_pr_checks.py)，脚本 blob `06cd03c5fc61c784d082e1c25a533c94e0912b3f`；完整许可 blob `13e25df86ce06eb6488e6a6bc5c5847f5dedc352`。修改说明见 [NOTICE](../NOTICE.txt)。旧库已退休，指向的新插件未核验到同名脚本；本地适配不是当前上游迁移版本，来源资格不等于效果验证。
