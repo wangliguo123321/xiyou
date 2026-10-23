@@ -2,7 +2,7 @@
 name: xiyou-taiyi
 description: "发现并评估成熟的公开 Skills，为现有人物炼化法器，或创建职责独立的新人物。显式调用或由 xiyou 总入口按需选用。"
 metadata:
-  version: "1.4.0"
+  version: "1.5.0"
   family: "xiyou"
 ---
 
@@ -17,6 +17,8 @@ metadata:
 任务已有客观断言并需可复算的多次结果时，按需读 [评测结果契约](references/evaluation-results.md)，使用纯数据辅助校验与汇总；主观成对评审不强制转换为断言。数据通过不代表技能通过，也不替代独立成对裁决。
 
 需要将多个 GitHub 源文件固定到同一提交并复核内容身份时，按需读 [只读取源](references/source-inspection.md)。辅助只返回正文与来源身份，不安装或执行上游内容。
+
+交付前需重复检查技能元数据时，按 [创建与评测中的结构检查](references/skill-creator.md#结构检查) 使用 `scripts/validate_skill.rb`，显式指定一个或多个技能目录；格式通过不代表技能效果通过。
 
 ## 工作方法
 
