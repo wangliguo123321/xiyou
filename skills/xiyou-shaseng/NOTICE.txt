@@ -15,6 +15,15 @@ obra/superpowers
 https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/verification-before-completion/SKILL.md
 许可证：licenses/verification.txt
 
+openai/skills（已退休的 gh-address-comments）
+https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-address-comments/SKILL.md
+https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-address-comments/scripts/fetch_comments.py
+许可证：licenses/gh-address-comments.txt（该技能自身的完整 Apache-2.0）
+作者与后续脚本修改者：lukeqin-oai；Christian Bager Bach Houmann / chhoumann。
+2026-10-24 修改：references/github-review-comments.md 与 scripts/inspect_pr_comments.py
+将三类评论取源方法适配为显式 base 仓库/PR、独立外层和线程内分页、稳定 JSON、身份与完整性核对和资源上限；未采用认证提权、自动选择当前分支或评论写操作。
+固定原源的该技能及分发祖先无适用 NOTICE；其许可末尾版权模板不是实际作者声明。本说明不暗示原作者认可适配或当前官方维护。
+
 mattpocock/skills
 https://github.com/mattpocock/skills/blob/959a8e9f1edc3adbe2f7e3054bb6fbefa6696260/skills/productivity/writing-for-agents/SKILL.md
 许可证：licenses/handoff.txt
