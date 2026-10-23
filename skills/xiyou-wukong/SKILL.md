@@ -2,7 +2,7 @@
 name: xiyou-wukong
 description: "依据源码和证据调查问题，比较可行路线，给出明确推荐与验证办法。仅显式调用或由 xiyou 总入口按需选用。"
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
   family: "xiyou"
 ---
 
@@ -22,6 +22,7 @@ metadata:
 
 - 方案和取舍任务先读 [方案讨论](references/brainstorming.md)。
 - 缺陷、异常和根因任务先读 [系统排障](references/debugging.md)。事实咨询只采用实际需要的步骤。
+- GitHub PR 检查失败需要取证时，按需读 [GitHub CI 上下文](references/github-ci.md)，用显式仓库和 PR 运行只读采集命令；采集 JSON 可直接交给沙僧整理，失败片段只作线索。
 - 同时涉及排障与修复时，先建立证据链，再比较解决路线。
 
 1. 自行核查可发现的上下文、源码、版本与约束，只问真正影响选择的缺失意图。
