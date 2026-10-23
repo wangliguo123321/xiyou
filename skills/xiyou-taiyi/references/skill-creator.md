@@ -38,6 +38,20 @@
 
 提供真实差异、来源、版本、依赖和必要使用示例，区分已验证收益、静态审查结论和未验证项。采用显式调用；Codex 的 allow_implicit_invocation 设置为 false。原始材料、适配稿和许可均可追溯。
 
+## 结构检查
+
+需要可重复的元数据检查时，使用技能内的只读辅助，路径按实际位置替换：
+
+```sh
+ruby /path/to/xiyou-taiyi/scripts/validate_skill.rb /path/to/skill-a /path/to/skill-b
+```
+
+依赖 Ruby 2.6 或以上及标准库 JSON、Psych、date；无需安装 PyYAML。`--help` 返回用法。只检查显式目录中的 `SKILL.md`，不递归发现；不联网、启动子进程或写文件。JSON 包含整体及逐目录状态、逐项错误，退出码 `0` 表示全部有效，`1` 表示至少一项结构无效，`2` 表示存在使用、读取或解析环境障碍，不能视为完成检查。
+
+检查 YAML 字典、顶层白名单、必需的非空 `name` 与 `description`、名称及描述长度/字符和出现时的 `compatibility` 类型/长度。允许字段为 `name`、`description`、`license`、`allowed-tools`、`metadata`、`compatibility`；不规定可选字段内部结构、目录同名、正文或 `agents` 配置。拒绝顶层重复字段、别名和 Ruby/自定义标签；安全解析只允许内置值及标准日期/时间标量，不允许任意对象类。
+
+单文件上限 262144 字节，超限返回 `2`；非法 UTF-8 返回 `1`。已有目录缺 `SKILL.md` 返回 `1`；目录不可访问、非目录、`SKILL.md` 非普通文件或 I/O 障碍返回 `2`。格式检查不能证明内容质量、运行安全、调用正确性或任务效果，仍需上述实际任务和独立验收。
+
 ## 西游适配
 
 保留意图、候选、基线比较、独立评测与有界迭代；不依赖 Claude 专属 CLI、模型名、全局 hooks、强制 HTML 评测界面或固定分数。

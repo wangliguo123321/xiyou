@@ -36,3 +36,10 @@ https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/s
 https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer/scripts/install-skill-from-github.py
 许可证：licenses/skill-installer.txt（目录 Apache-2.0 原文）
 改动：适配只读 GitHub 请求与显式取源方法，新增提交固定、字节核验及 JSON 产物；未采用安装、解压、git 回退或覆盖。具体取舍见 references/lineage.md。
+
+anthropics/skills（技能元数据结构校验方法）
+固定版本：dbd4588f9e1033efb41dad4bef2f7947c8993d44
+https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/scripts/quick_validate.py
+https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/scripts/package_skill.py
+许可证：licenses/skill-creator.txt（Apache-2.0，Copyright 2026 Anthropic, PBC.）
+2026-10-24 改动：独立编写 Ruby/Psych 只读结构校验辅助，复用字段约束方法并补安全解析、输入边界和多目录 JSON 状态；不执行上游脚本，不打包或安装。具体取舍见 references/lineage.md。
