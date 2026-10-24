@@ -18,3 +18,12 @@ openai/skills gh-fix-ci（retired-source）
 许可证：licenses/gh-fix-ci.txt（完整 Apache-2.0，保留原附录模板）
 修改日期：2026-10-24。中文说明及脚本改写保留检查→Actions 元数据/日志→片段和外部 CI 边界，新增显式身份、稳定 JSON、状态区分、超时/字节限量及按 job 取证。
 旧源已退休；新插件未发现同名脚本，不能称为其当前迁移版。源分发层级核验未发现额外 NOTICE；上游贡献记录包括 lukeqin-oai 和 Vaibhav Srivastav（vb-openai），不代表当前专属维护人。
+
+JetBrains/thinkrail spec-graph
+Copyright 2026 JetBrains s.r.o.
+固定 Skill：https://github.com/JetBrains/thinkrail/blob/4dba28897785039a73b70e278e3f632cfe17b1f9/packages/spec-graph/skills/spec-graph/SKILL.md
+固定方法：同提交 packages/spec-graph/core/parse.ts、graph.ts、query.ts、validate.ts。
+固定许可：https://github.com/JetBrains/thinkrail/blob/4dba28897785039a73b70e278e3f632cfe17b1f9/LICENSE
+许可证：licenses/thinkrail-spec-graph.txt（完整原 Apache-2.0 字节，含 JetBrains 版权）
+修改日期：2026-10-24。新增中文引用与独立 Ruby/Psych 只读实现，保留 id/type 识别、四类显式关系、有限深度正反查询与悬空/重复 ID/parent 环诊断方法；增加显式 root、稳定 JSON、完整性状态、资源上限、安全解析和歧义阻断。
+不移植上游 pi 注册、提示词注入、规范写入、缓存或自动同步；不是 npm yaml 2.9.0 的完全兼容实现。上游测试/CI 属于原实现证据，不代表 Ruby 适配或规范与源码语义正确。
