@@ -43,3 +43,10 @@ https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d
 https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/scripts/package_skill.py
 许可证：licenses/skill-creator.txt（Apache-2.0，Copyright 2026 Anthropic, PBC.）
 2026-10-24 改动：独立编写 Ruby/Psych 只读结构校验辅助，复用字段约束方法并补安全解析、输入边界和多目录 JSON 状态；不执行上游脚本，不打包或安装。具体取舍见 references/lineage.md。
+
+wayglass/wayglass-skill（CLI 文档与命令面快照核对）
+固定版本：4958b201766d53610731dcb9d0ae29fdfb13d108
+https://github.com/wayglass/wayglass-skill/blob/4958b201766d53610731dcb9d0ae29fdfb13d108/scripts/check.sh
+https://github.com/wayglass/wayglass-skill/blob/4958b201766d53610731dcb9d0ae29fdfb13d108/scripts/cli-surface.txt
+许可证：licenses/cli-doc-check.txt（MIT，Copyright 2026 TPS Cloud）
+2026-10-25 改动：将命令及旗标静态核对部分改写为 Python 标准库入口，参数化根命令与显式输入路径，提供 JSON 诊断与输入错误状态；保留有限文档语法边界。未采用其服务、快照生成、链接和标点检查。具体取舍见 references/lineage.md。

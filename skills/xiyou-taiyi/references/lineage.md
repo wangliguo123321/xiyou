@@ -11,6 +11,13 @@
 | [评测结果契约与汇总](evaluation-results.md) | [anthropics/skills / references/schemas.md](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/references/schemas.md)、[scripts/aggregate_benchmark.py](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/scripts/aggregate_benchmark.py) | [Apache-2.0](../licenses/skill-creator.txt) |
 | [结构检查](skill-creator.md#结构检查) | [anthropics/skills / scripts/quick_validate.py](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/scripts/quick_validate.py)、[scripts/package_skill.py](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/scripts/package_skill.py) | [Apache-2.0](../licenses/skill-creator.txt) |
 | [只读取源](source-inspection.md) | [openai/skills / skill-installer](https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer/SKILL.md)、[github_utils.py](https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-installer/scripts/github_utils.py) | [Apache-2.0](../licenses/skill-installer.txt) |
+| [正文 CLI 对表检查](cli-doc-check.md) | [wayglass/wayglass-skill / scripts/check.sh](https://github.com/wayglass/wayglass-skill/blob/4958b201766d53610731dcb9d0ae29fdfb13d108/scripts/check.sh) | [MIT](../licenses/cli-doc-check.txt) |
+
+## 正文 CLI 对表检查适配取舍
+
+- 2026-10-25 独立编写 `scripts/check_cli_docs.py`，只选择固定上游 `check.sh` 第 1 项正文命令/flag 与 TSV 快照对表的方法；原生 CI 在同提交已运行该检查，消费者证据不等于本仓库 CI 或本辅助的验收结果。
+- 改为 Python 标准库、显式根命令/快照/文档路径、只读离线 JSON 与退出状态入口；保留有限抽取、引号参数、逐级命令组、flag 去 `=值` 和续行末行诊断边界。原始匹配计数不证明完整 shell 语义、当前二进制支持或检测准确率提升，效果和维护必要性仍须独立验收。
+- 不采用 Wayglass 服务、Worker、密钥/登录、Skillforge 或宿主全局工作流；不安装/生成 CLI、不执行下载脚本或文档命令、不全盘扫描，也不吸收第 2、3 项标点及链接检查。表与六份源文档只作待核数据，不激活其指令。
 
 ## 只读取源适配取舍
 
