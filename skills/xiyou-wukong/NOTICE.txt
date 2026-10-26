@@ -27,3 +27,11 @@ Copyright 2026 JetBrains s.r.o.
 许可证：licenses/thinkrail-spec-graph.txt（完整原 Apache-2.0 字节，含 JetBrains 版权）
 修改日期：2026-10-24。新增中文引用与独立 Ruby/Psych 只读实现，保留 id/type 识别、四类显式关系、有限深度正反查询与悬空/重复 ID/parent 环诊断方法；增加显式 root、稳定 JSON、完整性状态、资源上限、安全解析和歧义阻断。
 不移植上游 pi 注册、提示词注入、规范写入、缓存或自动同步；不是 npm yaml 2.9.0 的完全兼容实现。上游测试/CI 属于原实现证据，不代表 Ruby 适配或规范与源码语义正确。
+
+wshobson/agents python-error-handling
+Copyright (c) 2024 Seth Hobson
+固定 Skill：https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/python-development/skills/python-error-handling/SKILL.md
+固定必要引用：同提交 plugins/python-development/skills/python-error-handling/references/details.md。
+固定许可：https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/LICENSE
+许可证：licenses/python-error-handling.txt（完整原 MIT 字节，保留版权与许可条件）
+修改日期：2026-10-27。技能最初贡献者 M. A.（mohammadaffaneh），插件作者 Seth Hobson。仅吸收具体异常在操作边界处理、保留其它可用结果的方法；在已有三个 JSON 解码捕获点加入 RecursionError，复用既有错误和部分采集状态。异常名称、捕获点及其接口语义为本地适配，原源未自带此补丁；不复制宽泛批处理异常捕获、依赖、自动重试或通用异常框架。
