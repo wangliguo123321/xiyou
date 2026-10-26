@@ -7,6 +7,9 @@
 | [retrieval](retrieval.md) | [affaan-m/everything-claude-code / skills/iterative-retrieval/SKILL.md](https://github.com/affaan-m/everything-claude-code/blob/8321021c54d670126ce3b2969d5deb880b4b0c2a/skills/iterative-retrieval/SKILL.md) | [MIT](../licenses/retrieval.txt) |
 | [explorer](explorer.md) | [affaan-m/everything-claude-code / agents/code-explorer.md](https://github.com/affaan-m/everything-claude-code/blob/8321021c54d670126ce3b2969d5deb880b4b0c2a/agents/code-explorer.md) | [MIT](../licenses/explorer.txt) |
 | [action-first](action-first.md) | [ayghri/i-have-adhd / skills/i-have-adhd/SKILL.md](https://github.com/ayghri/i-have-adhd/blob/b15d0be58f55b33972ba3e39709e0e5208ef30cb/skills/i-have-adhd/SKILL.md) | [MIT](../licenses/action-first.txt) |
+| [project-entry](project-entry.md) | [github/awesome-copilot / skills/acquire-codebase-knowledge/scripts/scan.py](https://github.com/github/awesome-copilot/blob/7629185ca7644389b37b16aad9e592c277533200/skills/acquire-codebase-knowledge/scripts/scan.py)，所属 [Skill](https://github.com/github/awesome-copilot/blob/7629185ca7644389b37b16aad9e592c277533200/skills/acquire-codebase-knowledge/SKILL.md) | [MIT](../licenses/project-entry.txt) |
+
+`project-entry` 保留“清单优先，再查声明入口”的方法，增加根 `package.json` 与 `pyproject.toml` 的标准库结构化提取和有界只读接口。上游是清单预览/入口候选扫描，不声称其已有本实现的字段提取器；不复制全树、TODO、Git 热点或强制七篇仓内文档流程。
 
 ## 本轮取舍
 
