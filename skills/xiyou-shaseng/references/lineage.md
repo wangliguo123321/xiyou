@@ -20,3 +20,5 @@ PR 采集以沙僧的输入整理及交接职责承接。2026-10-24 依据固定
 2026-10-26 的 [PR 文件输入采集](github-pr-files.md)沿用同一固定源及 Apache-2.0 归因，扩展为只读 REST 文件清单与 API patch 字段，复用本技能既有的有界 gh 捕获；原源本身没有该文件接口。新增逐页身份复核、文件数量/数据预算及文件列表与 patch 的分层完整性。字段语义依据该法器链接的 GitHub 官方文档；不宣称 patch 文本完整或代码已审，不修改既有评论接口。
 
 2026-10-26 对既有 [PR 审查输入采集](github-review-comments.md)补齐有限浮点与递归解码错误处理，原字段、分页、身份及输出接口不变。此为上述固定源的宿主适配修正，沿用 Apache-2.0 与作者归因；不声称上游原实现已有修复或生产故障已发生。
+
+2026-10-26 参考 [wshobson/agents 的 Python 性能方法](https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/python-development/skills/python-performance-optimization/SKILL.md)（固定提交 `0874a27b17a22e2b7c2e2bcd725768e0803cad06`，作者 Seth Hobson，[MIT 全文](../licenses/python-performance.txt)），采用标准库 profile 归因来选择评论输入的紧凑 JSON 输出。具体格式为宿主实现选择，不引入通用调优流程、源程序或新运行依赖。

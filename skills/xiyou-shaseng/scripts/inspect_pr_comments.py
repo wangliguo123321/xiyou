@@ -487,7 +487,7 @@ def main():
     parser.add_argument("--max-pages", type=positive_int, default=10, help="每个外层或线程内层连接页数上限，默认 10")
     args = parser.parse_args()
     result = Inspector(args).run()
-    print(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False))
+    print(json.dumps(result, ensure_ascii=False, separators=(",", ":"), allow_nan=False))
     return result["exit_code"]
 
 
