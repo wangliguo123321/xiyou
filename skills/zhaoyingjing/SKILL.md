@@ -2,7 +2,7 @@
 name: zhaoyingjing
 description: "照影镜·代码巡检：以一个入口调用 Alibaba OpenCodeReview 的差异审查、全量扫描、委托审查、规则、会话、结构化输出与 CI 能力。显式调用或由 xiyou 总入口按需选用。"
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   family: "xiyou"
 ---
 

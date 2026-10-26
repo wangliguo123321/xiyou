@@ -6,4 +6,7 @@ zhaoyingjing 衍生说明
 alibaba/open-code-review
 Copyright 2026 Alibaba
 https://github.com/alibaba/open-code-review/tree/fabbdb296b0d97e2140ada8d54ca7d6d6d1d7ad4
-许可证：Apache License 2.0，见本仓库根目录 LICENSE
+许可证：Apache License 2.0，原上游全文随包保存在 licenses/open-code-review.txt
+
+2026-10-26 修改：单包来源与许可自足
+将历史评估记录改为固定提交的公开链接，随包保留上述固定上游的 Apache-2.0 原文，并更新许可指向与技能版本。保留原作者、上游基线与运行流程；单独取用无需依赖太乙目录或本仓库根许可文件。
