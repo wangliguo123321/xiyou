@@ -14,3 +14,10 @@ https://github.com/affaan-m/everything-claude-code/blob/8321021c54d670126ce3b296
 ayghri/i-have-adhd
 https://github.com/ayghri/i-have-adhd/blob/b15d0be58f55b33972ba3e39709e0e5208ef30cb/skills/i-have-adhd/SKILL.md
 许可证：licenses/action-first.txt
+
+
+github/awesome-copilot：项目入口与清单探测方法
+https://github.com/github/awesome-copilot/blob/7629185ca7644389b37b16aad9e592c277533200/skills/acquire-codebase-knowledge/SKILL.md
+https://github.com/github/awesome-copilot/blob/7629185ca7644389b37b16aad9e592c277533200/skills/acquire-codebase-knowledge/scripts/scan.py
+许可证：licenses/project-entry.txt（MIT，GitHub, Inc.）
+2026-10-26：保留先检查真实项目清单再定位入口的方法，适配为仅根package.json/pyproject.toml的标准库结构化只读工具；不承接上游全库扫描、Git热点或七篇仓内文档流程。
