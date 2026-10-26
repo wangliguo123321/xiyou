@@ -11,9 +11,9 @@
 | 主调用 Skill | [`skills/open-code-review/SKILL.md`](https://github.com/alibaba/open-code-review/blob/fabbdb296b0d97e2140ada8d54ca7d6d6d1d7ad4/skills/open-code-review/SKILL.md) |
 | 委托模式 Skill | [`skills/open-code-review-delegate/SKILL.md`](https://github.com/alibaba/open-code-review/blob/fabbdb296b0d97e2140ada8d54ca7d6d6d1d7ad4/skills/open-code-review-delegate/SKILL.md) |
 | 官方文档 | [`pages/src/content/docs`](https://github.com/alibaba/open-code-review/tree/fabbdb296b0d97e2140ada8d54ca7d6d6d1d7ad4/pages/src/content/docs) |
-| 许可证 | [Apache-2.0](https://github.com/alibaba/open-code-review/blob/fabbdb296b0d97e2140ada8d54ca7d6d6d1d7ad4/LICENSE) |
+| 许可证 | [Apache-2.0 随包全文](../licenses/open-code-review.txt)（[固定原文](https://github.com/alibaba/open-code-review/blob/fabbdb296b0d97e2140ada8d54ca7d6d6d1d7ad4/LICENSE)） |
 
-调研与融合判断见 [太乙评估记录](../../xiyou-taiyi/references/open-code-review-assessment.md)。
+调研与融合判断见 [固定历史评估](https://github.com/wangliguo123321/xiyou/blob/f3f548441d20cf02ff610ccec80ac305bd0987d6/skills/xiyou-taiyi/references/open-code-review-assessment.md)。单独取用照影镜无需安装太乙；运行方法以本包 SKILL.md 和操作指南为准。
 
 ## 采用内容
 
