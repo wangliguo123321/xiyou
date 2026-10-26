@@ -23,7 +23,7 @@ python3 <沙僧技能目录>/scripts/inspect_pr_comments.py --repo OWNER/REPO --
 
 每页最多 100 项，所有请求（包括前后身份读取）共享固定 **100 次**预算，并为最后一次身份读取留出名额。每条命令的 stdout、stderr 各有真实 **2 MiB** 捕获上限；超时或超限终止当前独立进程组，保留捕获状态。增大页数不会绕过全局预算与字节上限。
 
-脚本只向 stdout 输出 JSON，本身不写文件；帮助和参数错误遵循命令行惯例。需要保存结果时，由调用者选定任务允许的位置。正文、作者和诊断可能含敏感资料，保存与分享前按当前任务范围处理，不直接贴到外部渠道。
+脚本只向 stdout 输出紧凑 JSON 对象，本身不写文件；原文字段中的空格、换行和 Unicode 保留。输出缩进和行号不属于数据协议，需要人工排版时可另行格式化已保存的 JSON。帮助和参数错误遵循命令行惯例。需要保存结果时，由调用者选定任务允许的位置。正文、作者和诊断可能含敏感资料，保存与分享前按当前任务范围处理，不直接贴到外部渠道。
 
 ## 稳定输出与退出状态
 
@@ -73,3 +73,5 @@ python3 <沙僧技能目录>/scripts/inspect_pr_comments.py --repo OWNER/REPO --
 保留三类审查输入、原字段及 GraphQL 分页方法；改为显式 base 仓库、独立外层与内层分页、身份/完整性状态和有界资源使用。不采用按当前分支/head 仓库定位、无界调用、静默截断、扩大认证权限、每次要求用户重新挑选意见或自动照单修改。原源有限维护/公开使用报告不足以证明普遍效果，适配质量以本版本实际验证范围为限。
 
 2026-10-26 补齐既有评论工具的有限浮点解码及递归解码错误路径，沿用原输出接口与许可。这是宿主异常边界修正，不代表上游原实现已有该修复，也不表示 GitHub 生产接口曾返回这些受控异常。
+
+2026-10-26 参考 Seth Hobson 的 [Python 性能分析方法](https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/python-development/skills/python-performance-optimization/SKILL.md)与[具体模式](https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/python-development/skills/python-performance-optimization/references/details.md)，先用标准库 profiling 核对本地输出序列化成本，再选择紧凑 JSON。格式修正为宿主适配，源未提供该修复；适用 [MIT 原许可](../licenses/python-performance.txt)。

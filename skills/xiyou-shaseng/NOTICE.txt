@@ -48,3 +48,10 @@ API 依据：https://docs.github.com/en/rest/pulls/pulls#list-pull-requests-file
 2026-10-26 修改：PR 评论响应的 JSON 解码错误边界
 修改 scripts/inspect_pr_comments.py 的有限浮点解码与递归解码错误处理，并更新技能版本、references/github-review-comments.md 与 references/lineage.md；原接口、分页、身份及文件采集实现不变。
 这是宿主异常边界修正，不声称上述 gh-address-comments 原实现已有修复或 GitHub 生产接口曾返回受控异常。沿用 licenses/gh-address-comments.txt（Apache-2.0）及上述作者归因，不增加执行、回复或合并权限。
+
+2026-10-26 修改：PR 评论输入的输出格式开销
+wshobson/agents，Copyright (c) 2024 Seth Hobson
+https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/python-development/skills/python-performance-optimization/SKILL.md
+https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/python-development/skills/python-performance-optimization/references/details.md
+许可证：licenses/python-performance.txt（MIT 原文）
+参考标准库 profiling 方法核对本地输出成本，将 inspect_pr_comments.py 的机器 JSON 改为紧凑格式，并更新版本和必要引用。具体 JSON 格式修正不来自原源，不复制其性能倍率或内存泄漏结论；原输入采集方法及 Apache-2.0 归因继续保留。
