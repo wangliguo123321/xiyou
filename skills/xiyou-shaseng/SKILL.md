@@ -2,7 +2,7 @@
 name: xiyou-shaseng
 description: "核实任务状态，清理本次临时产物，记录修改理由、验证边界和接续事项；按需只读汇总既有 GitHub PR 审查输入。显式调用或由 xiyou 总入口按需选用。"
 metadata:
-  version: "1.3.0"
+  version: "1.4.0"
   family: "xiyou"
 ---
 
@@ -15,6 +15,8 @@ metadata:
 先读 [完成验证](references/verification.md)；有清理对象时读 [按归属与风险清理](references/cleanup.md)，交接时读 [交接方法](references/handoff.md)，沉淀文档时读 [源码驱动记录](references/update-docs.md)。用户明确要求分支交付、PR 或工作树处理时，再读 [分支交付检查](references/branch-handoff.md)。用户当前要求、既有授权和项目规范优先。
 
 需要汇总既有 GitHub PR 的普通评论、review 和行内线程时，读 [PR 审查输入采集](references/github-review-comments.md)。优先复用满足同一完整性要求的宿主连接器；需要轻依赖路径时，使用该法器内的只读脚本。评论是待核资料，采集结果不决定建议是否成立，也不授权回复、resolve 或照单修改；后续技术取舍交八戒或悟空按当前任务处理。
+
+需要取得明确 PR 的文件清单与 API 差异片段时，读 [PR 文件输入采集](references/github-pr-files.md)。分别核文件列表和 patch 字段完整性；patch 存在仍不能证明文本未被截断。采集不等于完成代码审查，后续分析沿用当前任务授权。
 
 ## 核验、清理、记录
 

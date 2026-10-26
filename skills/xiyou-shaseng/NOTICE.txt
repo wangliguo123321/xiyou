@@ -36,3 +36,11 @@ https://github.com/affaan-m/everything-claude-code/blob/8321021c54d670126ce3b296
 obra/superpowers
 https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/finishing-a-development-branch/SKILL.md
 许可证：licenses/verification.txt
+
+
+2026-10-26 修改：PR 文件与 API 差异片段输入
+在上述 gh-address-comments 分页/身份方法与本技能有界 gh 捕获实现上，新增 scripts/inspect_pr_files.py 和 references/github-pr-files.md；原评论入口不变。
+新增功能是宿主对 GitHub REST 文件接口的适配，不声称原源已提供该接口；沿用 licenses/gh-address-comments.txt（Apache-2.0）及上述作者归因。
+API 依据：https://docs.github.com/en/rest/pulls/pulls#list-pull-requests-files
+差异语义：https://docs.github.com/en/pull-requests/reference/branches
+文件清单与 patch 字段可用性分层；不证明完整补丁文本/源码审查或原子快照，不执行或采纳补丁，不授权回复或合并。
