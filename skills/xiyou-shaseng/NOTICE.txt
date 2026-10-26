@@ -44,3 +44,7 @@ https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a779
 API 依据：https://docs.github.com/en/rest/pulls/pulls#list-pull-requests-files
 差异语义：https://docs.github.com/en/pull-requests/reference/branches
 文件清单与 patch 字段可用性分层；不证明完整补丁文本/源码审查或原子快照，不执行或采纳补丁，不授权回复或合并。
+
+2026-10-26 修改：PR 评论响应的 JSON 解码错误边界
+修改 scripts/inspect_pr_comments.py 的有限浮点解码与递归解码错误处理，并更新技能版本、references/github-review-comments.md 与 references/lineage.md；原接口、分页、身份及文件采集实现不变。
+这是宿主异常边界修正，不声称上述 gh-address-comments 原实现已有修复或 GitHub 生产接口曾返回受控异常。沿用 licenses/gh-address-comments.txt（Apache-2.0）及上述作者归因，不增加执行、回复或合并权限。

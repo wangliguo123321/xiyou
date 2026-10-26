@@ -54,6 +54,8 @@ python3 <沙僧技能目录>/scripts/inspect_pr_comments.py --repo OWNER/REPO --
 
 只有 complete 退出 0。零评论、零 review、零线程也可 complete，但它只表示当前权限下本次三类输入已取齐，不意味着代码无问题、可以合并或未发生过讨论。partial/error/stale 均退出 2，不能通过更改期望、忽略诊断或只看数组非空来宣称完整。
 
+响应中 `NaN`、`Infinity`、`-Infinity` 字面量、无法表示为有限 Python float 的数值，以及超过当前解码器能力的嵌套，按 `invalid_json` 返回；初始身份未核时为 error，已有可信身份时为 partial，并保留此前已核内容。`1e999` 可以符合 JSON 数字语法，这里是宿主表示能力限制；字符串中的相同文字与正常有限数值仍保原值。不设置统一嵌套层数或提高递归上限，不同解释器可解码的深度可能不同。
+
 ## 采集与接续边界
 
 三外层分别从首屏开始独立翻页，已耗尽者不重拉。每个线程的回复也独立翻页，通过 node(id) 核线程类型、ID 及所属 PR/repository/head。每页核显式目标与初始身份；totalCount 改变、末页数量不符、重复 ID、坏 shape、GraphQL errors、非零命令状态、无进展游标和任一上限都会留下明确原因。缺页不补成空数组成功，也不把初始 100 条叫全量。
@@ -69,3 +71,5 @@ python3 <沙僧技能目录>/scripts/inspect_pr_comments.py --repo OWNER/REPO --
 2026-10-24 改写自已退休的 [openai/skills gh-address-comments](https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-address-comments/SKILL.md) 及 [fetch_comments.py](https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-address-comments/scripts/fetch_comments.py)，完整提交 `49f948faa9258a0c61caceaf225e179651397431`，适用 [Apache-2.0 原许可](../licenses/gh-address-comments.txt)。原库已标 deprecated；这是固定历史方法的适配，不是当前官方维护版。
 
 保留三类审查输入、原字段及 GraphQL 分页方法；改为显式 base 仓库、独立外层与内层分页、身份/完整性状态和有界资源使用。不采用按当前分支/head 仓库定位、无界调用、静默截断、扩大认证权限、每次要求用户重新挑选意见或自动照单修改。原源有限维护/公开使用报告不足以证明普遍效果，适配质量以本版本实际验证范围为限。
+
+2026-10-26 补齐既有评论工具的有限浮点解码及递归解码错误路径，沿用原输出接口与许可。这是宿主异常边界修正，不代表上游原实现已有该修复，也不表示 GitHub 生产接口曾返回这些受控异常。

@@ -134,6 +134,13 @@ def reject_constant(value):
     raise ValueError("不允许非有限 JSON 数值：" + value)
 
 
+def finite_float(value):
+    parsed = float(value)
+    if not math.isfinite(parsed):
+        raise ValueError("JSON 数值无法表示为有限浮点数。")
+    return parsed
+
+
 def nonempty(value):
     return isinstance(value, str) and bool(value) and not any(ord(c) < 32 for c in value)
 
@@ -228,9 +235,9 @@ class Inspector:
             self.issue("gh_error", scope, "gh 返回非零状态；未将其输出视为完整分页。", conn)
             return None
         try:
-            payload = json.loads(payload, parse_constant=reject_constant)
-        except (ValueError, UnicodeDecodeError):
-            self.issue("invalid_json", scope, "gh 未返回合法 JSON 对象。", conn)
+            payload = json.loads(payload, parse_float=finite_float, parse_constant=reject_constant)
+        except (ValueError, UnicodeDecodeError, RecursionError):
+            self.issue("invalid_json", scope, "gh 响应无法作为本工具可采集的 JSON 解码。", conn)
             return None
         if not isinstance(payload, dict):
             self.issue("invalid_shape", scope, "GraphQL 顶层必须为对象。", conn)

@@ -2,7 +2,7 @@
 name: xiyou-shaseng
 description: "核实任务状态，清理本次临时产物，记录修改理由、验证边界和接续事项；按需只读汇总既有 GitHub PR 审查输入。显式调用或由 xiyou 总入口按需选用。"
 metadata:
-  version: "1.4.0"
+  version: "1.4.1"
   family: "xiyou"
 ---
 
