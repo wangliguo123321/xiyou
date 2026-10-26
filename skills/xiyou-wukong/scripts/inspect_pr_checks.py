@@ -171,7 +171,7 @@ class Inspector:
             return None, result["status"] if result["status"] != "ok" else "gh_error"
         try:
             data = json.loads(payload, parse_constant=reject_constant)
-        except (ValueError, UnicodeDecodeError):
+        except (ValueError, UnicodeDecodeError, RecursionError):
             return None, "invalid_json"
         if not isinstance(data, dict):
             return None, "invalid_shape"
@@ -209,7 +209,7 @@ class Inspector:
             # gh 2.93 的 0/1/8 都可能携带合法检查 JSON；先解析资料再判断退出码。
             try:
                 data = json.loads(payload, parse_constant=reject_constant)
-            except (ValueError, UnicodeDecodeError):
+            except (ValueError, UnicodeDecodeError, RecursionError):
                 data = None
             if isinstance(data, list):
                 if result["exit_code"] not in (0, 1, 8):
@@ -246,7 +246,7 @@ class Inspector:
                 break
             try:
                 body = json.loads(payload, parse_constant=reject_constant)
-            except (ValueError, UnicodeDecodeError):
+            except (ValueError, UnicodeDecodeError, RecursionError):
                 self.rollup_error = "rollup_invalid_json"
                 break
             data = body.get("data") if isinstance(body, dict) else None
