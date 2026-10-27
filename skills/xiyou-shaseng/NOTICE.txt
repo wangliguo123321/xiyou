@@ -64,3 +64,10 @@ https://github.com/trailofbits/skills/blob/196a9073ab10d35bacf111f945e02c00b2c68
 独立改编文件：scripts/inspect_sarif_levels.py、references/sarif-levels.md。
 上述两份独立改编材料采用 CC-BY-SA-4.0，完整许可原字节见 licenses/sarif-parsing.txt；不将其改标 Apache/MIT，其他独立组件保持其原有许可。
 2026-10-28 改动：保留 run 内 driver 规则查找、kind/显式等级/规则默认/缺省 warning 层次；增加有限输入校验、资源上限、未知/未解释上下文与原始/归一计数、明细截断和结构化退出协议。未移植扫描器、指纹去重、合并/diff、SARIF重写、CI发布或未完整支持的规则扩展/覆盖/抑制政策；不执行上游程序。修改与范围详见 references/lineage.md。
+
+OpenAI / skills（已弃用公开例库中的 PDF 窄方法）
+https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/pdf/SKILL.md
+许可证：licenses/pdf.txt（固定 PDF 目录的完整 Apache-2.0）。
+来源归属：OpenAI 公开例库；引入/同步维护 Vaibhav Srivastav（vb-openai），引入提交并署 Dominik Kundel。不推断个人拥有全部著作权，也不编原源未给出的版权年份。
+2026-10-28 修改：新增 scripts/render_pdf_pages.py 与 references/pdf-render-evidence.md；吸收 Poppler 逐页渲染后实际看图、文字抽取不能证明版面的具体方法。本地新写输入内容快照、明确选页、全新输出目录和逐页身份清单，原源本身没有该脚本或协议。
+不复制当前专有 PDF 插件，不继承依赖自动安装或源仓输出目录约定；不称当前官方维护、上游运行效果或 OpenAI 背书。固定目录无适用 NOTICE，完整许可中的版权模板不作为真实作者声明。

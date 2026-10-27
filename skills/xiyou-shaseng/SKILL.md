@@ -1,8 +1,8 @@
 ---
 name: xiyou-shaseng
-description: "核实任务状态，清理本次临时产物，记录修改理由、验证边界和接续事项；按需只读汇总既有 GitHub PR 审查输入、观察 SARIF 报告等级。显式调用或由 xiyou 总入口按需选用。"
+description: "核实任务状态，清理本次临时产物，记录修改理由、验证边界和接续事项；按需只读汇总既有 GitHub PR 审查输入、观察 SARIF 报告等级、生成 PDF 逐页渲染证据。显式调用或由 xiyou 总入口按需选用。"
 metadata:
-  version: "1.5.0"
+  version: "1.6.0"
   family: "xiyou"
 ---
 
@@ -19,6 +19,8 @@ metadata:
 需要取得明确 PR 的文件清单与 API 差异片段时，读 [PR 文件输入采集](references/github-pr-files.md)。分别核文件列表和 patch 字段完整性；patch 存在仍不能证明文本未被截断。采集不等于完成代码审查，后续分析沿用当前任务授权。
 
 需要读取已有 SARIF 2.1.0 报告的等级与规则继承时，读 [SARIF 等级观察](references/sarif-levels.md)，显式给输入文件。它保留 run 上下文与未知，不运行扫描器、不读取报告内路径、不确认漏洞或放行 CI；解析退出码不代表报告没有 error 等级结果。
+
+需要为已有 PDF 准备可逐页查看的交付证据时，读 [PDF 逐页渲染证据](references/pdf-render-evidence.md)，显式给输入文件与全新输出目录。它绑定实际渲染内容、请求页码和 PNG 清单；已有宿主工具能提供相同证据时优先复用。渲染完成仍需实际看图，不等于版式合格；生成、编辑 PDF 或 OCR 不由此法器承接。
 
 ## 核验、清理、记录
 
