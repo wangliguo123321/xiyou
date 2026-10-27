@@ -127,6 +127,8 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 /xiyou-shaseng 清理本次临时验证文件，记录修改理由、验证边界和下一步。
 ```
 
+已有 PDF 需要交付验收时，可让沙僧生成[逐页渲染证据](skills/xiyou-shaseng/references/pdf-render-evidence.md)：把明确内容和页范围对应到 PNG 与清单，再实际看图核版面；不把渲染成功当作视觉合格。
+
 ### 太乙·炼技：把社区经验炼成可用的法器
 
 借太乙真人传授能力、重塑既有结构的意象，负责持续吸收开源社区的经验。
@@ -199,7 +201,7 @@ xiyou 从已有的优秀方法出发，保留有用的流程，再针对角色�
 | [悟空](skills/xiyou-wukong/references/lineage.md) | Superpowers `brainstorming`、`systematic-debugging` |
 | [哪吒](skills/xiyou-nezha/references/lineage.md) | ECC `iterative-retrieval`、`code-explorer`；`i-have-adhd` 的行动优先表达 |
 | [八戒](skills/xiyou-bajie/references/lineage.md) | Anthropic 代码简化、ECC 复用优先、Matt Pocock 双轴审查、Superpowers 评审建议核验、gstack 范围保持与缩减 |
-| [沙僧](skills/xiyou-shaseng/references/lineage.md) | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证；Trail of Bits SARIF 等级观察（独立 CC-BY-SA-4.0 法器） |
+| [沙僧](skills/xiyou-shaseng/references/lineage.md) | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证；OpenAI 历史公开 PDF 逐页渲染验收；Trail of Bits SARIF 等级观察（独立 CC-BY-SA-4.0 法器） |
 | [太乙](skills/xiyou-taiyi/references/lineage.md) | Vercel `find-skills`、Anthropic `skill-creator`、ECC 技能盘点、Darwin 匿名成对比较与有界优化 |
 | [修炼（法器）](skills/xiyou-xiulian/references/lineage.md) | talki `prompt-optimizer` 的保真改写、Max Simchowitz `prompt-improving` 的上下文澄清（均为 MIT 许可） |
 | [照影镜（法器）](skills/zhaoyingjing/references/lineage.md) | Alibaba OpenCodeReview 的差异审查、全量扫描、委托模式、规则、会话与集成能力（Apache-2.0） |
