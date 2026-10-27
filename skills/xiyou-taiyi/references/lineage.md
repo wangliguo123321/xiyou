@@ -31,6 +31,13 @@
 - 使用宿主 Ruby/Psych 安全解析，不执行上游脚本或安装 PyYAML；补充非空字符串、重复顶层字段、别名/自定义标签拒绝、UTF-8 与有界读取，输出多目录逐项 JSON 和非成功退出状态。标准日期/时间标量保留；不限制可选字段内部结构。
 - 不采用打包、目录复制、联网、任意对象构造或自动安装；结构校验与内容质量、运行安全、触发和实际效果分开验收。仅提供可复用的静态检查入口，不声明提高检测准确率或获得安全认证。
 
+## 本地打包适配取舍
+
+- 2026-10-27 另增 `scripts/package_skill.py`，采用同一固定 Anthropic `skill-creator@dbd4588f9e1033efb41dad4bef2f7947c8993d44` 的 [package_skill.py](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/scripts/package_skill.py) 的先校验、整目录分发、保留布局和排除构建杂项方法。上文“结构校验”入口仍只读、不打包，二者是独立操作。
+- 原脚本 blob `f48eac444656ddc41204aac1760a217951ce609e`，源码 SHA256 `1a33059b0db1ef73375d46d513e5ea81369d2e8838c970597b0d52ddef8d1c0f`；完整目录许可沿用 [Apache-2.0](../licenses/skill-creator.txt)，保留 Copyright 2026 Anthropic, PBC.。路径最近提交者为 Kenshiro Nakagawa（kencheeto），不是全部原作者的声明。
+- 本地使用 Python 标准库及同包现有 Ruby/Psych 校验器，不执行原脚本、不安装 PyYAML。捕获元数据字节、有界读取、拒绝符号链接/源内或已有输出、源外私有成品回读后独占发布和失败回收是宿主补充，不冒称原源具有这些保证；失败不删除最终输出路径。
+- 只提供显式本地目录到新分发文件的可靠重复操作；不安装或发布，不校正文/引用语义闭包/许可本来齐备，不保证原子多文件快照。原有简单完整复制/归档能力保留，工程接口价值按实际产物与失败边界验证，不以新命令名或一般模型能力判优。
+
 ## 评测结果适配取舍
 
 - 2026-10-22 独立编写 `scripts/summarize_evaluation.py`，吸收固定上游的断言证据、运行身份、timing 与多次统计思想；采用 xiyou 显式双版本配对输入，非原 viewer 兼容实现。
