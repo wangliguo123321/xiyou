@@ -1,8 +1,8 @@
 ---
 name: xiyou-wukong
-description: "依据源码和证据调查问题，按已有规范图定位关联边界，比较可行路线并给出验证办法，按需观察离线 SQLite 结构与查询计划。仅显式调用或由 xiyou 总入口按需选用。"
+description: "依据源码和证据调查问题，按已有规范图定位关联边界，比较可行路线并给出验证办法，按需观察离线 SQLite 结构与查询计划、已导出 Terraform 状态的资源地址库存。仅显式调用或由 xiyou 总入口按需选用。"
 metadata:
-  version: "1.4.0"
+  version: "1.5.0"
   family: "xiyou"
 ---
 
@@ -25,6 +25,7 @@ metadata:
 - GitHub PR 检查失败需要取证时，按需读 [GitHub CI 上下文](references/github-ci.md)，用显式仓库和 PR 运行只读采集命令；采集 JSON 可直接交给沙僧整理，失败片段只作线索。
 - 用户项目已有 Thinkrail 格式的 Markdown 规范图、需要定位多层约束或反向关联时，读 [规范图查询与诊断](references/spec-graph.md)，用只读工具返回关联节点、路径和结构问题；没有这种原有材料时沿用普通源码调查，不要求建立新规范体系。
 - 用户明确提供稳定离线 SQLite 文件、需要查看结构或查询计划时，读 [SQLite 只读取证](references/sqlite-evidence.md)，显式指定文件，用原生引擎返回结构或 `EXPLAIN QUERY PLAN`；不执行原查询、不自动优化或修改数据库。
+- 用户已有明确的 Terraform `show -json` 状态文件，需要迁移前盘点声明地址与模块层次时，读 [离线 Terraform 状态库存](references/terraform-state-inventory.md)。法器只读文件，保留 Current/Deposed 对象区别，不输出资源属性值；不执行 Terraform 或云操作，不决定迁移安全。
 - 同时涉及排障与修复时，先建立证据链，再比较解决路线。
 
 1. 自行核查可发现的上下文、源码、版本与约束，只问真正影响选择的缺失意图。

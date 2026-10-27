@@ -81,6 +81,8 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 /xiyou-wukong 比较这两种修复路线，说明各自的影响，给出推荐和验证办法。
 ```
 
+已有 Terraform 状态导出需要盘点时，悟空可读取[离线资源地址库存](skills/xiyou-wukong/references/terraform-state-inventory.md)，保留模块与对象分类，不输出资源属性值，不运行 Terraform 或云操作。
+
 ### 哪吒·速断：圈定问题，尽快答完
 
 风火轮负责快速抵达入口，乾坤圈负责限制调查范围。
@@ -198,7 +200,7 @@ xiyou 从已有的优秀方法出发，保留有用的流程，再针对角色�
 | 技能与来源记录 | 主要基础 |
 |---|---|
 | [唐僧](skills/xiyou-tangseng/references/lineage.md) | Anthropic 解释式教学、Matt Pocock `teach` |
-| [悟空](skills/xiyou-wukong/references/lineage.md) | Superpowers `brainstorming`、`systematic-debugging` |
+| [悟空](skills/xiyou-wukong/references/lineage.md) | Superpowers `brainstorming`、`systematic-debugging`；HashiCorp Terraform 状态地址盘点（独立 MPL-2.0 法器） |
 | [哪吒](skills/xiyou-nezha/references/lineage.md) | ECC `iterative-retrieval`、`code-explorer`；`i-have-adhd` 的行动优先表达 |
 | [八戒](skills/xiyou-bajie/references/lineage.md) | Anthropic 代码简化、ECC 复用优先、Matt Pocock 双轴审查、Superpowers 评审建议核验、gstack 范围保持与缩减 |
 | [沙僧](skills/xiyou-shaseng/references/lineage.md) | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证；OpenAI 历史公开 PDF 逐页渲染验收；Trail of Bits SARIF 等级观察（独立 CC-BY-SA-4.0 法器） |
@@ -229,3 +231,5 @@ GitHub 中的改进经合并后成为共享版本。已经安装到电脑里的�
 本项目新增组织与适配内容采用 [Apache-2.0](LICENSE)。各上游内容保留其原有许可，版权声明及许可证随对应技能提供，详见 [NOTICE](NOTICE)。
 
 独立的 [SARIF 等级观察引用](skills/xiyou-shaseng/references/sarif-levels.md) 与 [对应实现](skills/xiyou-shaseng/scripts/inspect_sarif_levels.py) 是 Trail of Bits 方法的改编，按 [CC-BY-SA-4.0](skills/xiyou-shaseng/licenses/sarif-parsing.txt) 分发；此为上述默认声明的明确文件例外。归属与修改说明随法器提供，其余独立组件的许可不变。
+
+独立的 [Terraform 状态库存引用](skills/xiyou-wukong/references/terraform-state-inventory.md)与[对应实现](skills/xiyou-wukong/scripts/inspect_terraform_state.py)按 [MPL-2.0](skills/xiyou-wukong/licenses/terraform-refactor.txt)分发，来源 HashiCorp / Copyright IBM Corp. 2026；这是默认 Apache 声明的明确文件例外，其余独立组件许可不变。
