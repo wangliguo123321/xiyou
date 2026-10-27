@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import re
 import selectors
@@ -79,6 +80,13 @@ def positive_id(value):
 
 def reject_constant(value):
     raise ValueError("JSON 中不允许非有限数值：" + value)
+
+
+def finite_float(value):
+    parsed = float(value)
+    if not math.isfinite(parsed):
+        raise ValueError("JSON 数值超出本工具可表示的有限浮点范围。")
+    return parsed
 
 
 def bounded_gh(arguments, timeout, stdout_limit):
@@ -170,7 +178,7 @@ class Inspector:
         if result["status"] != "ok" or result["exit_code"] != 0:
             return None, result["status"] if result["status"] != "ok" else "gh_error"
         try:
-            data = json.loads(payload, parse_constant=reject_constant)
+            data = json.loads(payload, parse_constant=reject_constant, parse_float=finite_float)
         except (ValueError, UnicodeDecodeError, RecursionError):
             return None, "invalid_json"
         if not isinstance(data, dict):
@@ -208,7 +216,7 @@ class Inspector:
                 return None, result["status"]
             # gh 2.93 的 0/1/8 都可能携带合法检查 JSON；先解析资料再判断退出码。
             try:
-                data = json.loads(payload, parse_constant=reject_constant)
+                data = json.loads(payload, parse_constant=reject_constant, parse_float=finite_float)
             except (ValueError, UnicodeDecodeError, RecursionError):
                 data = None
             if isinstance(data, list):
@@ -245,7 +253,7 @@ class Inspector:
                 self.rollup_error = "rollup_" + (result["status"] if result["status"] != "ok" else "gh_error")
                 break
             try:
-                body = json.loads(payload, parse_constant=reject_constant)
+                body = json.loads(payload, parse_constant=reject_constant, parse_float=finite_float)
             except (ValueError, UnicodeDecodeError, RecursionError):
                 self.rollup_error = "rollup_invalid_json"
                 break
