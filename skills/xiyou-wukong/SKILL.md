@@ -2,7 +2,7 @@
 name: xiyou-wukong
 description: "依据源码和证据调查问题，按已有规范图定位关联边界，比较可行路线并给出验证办法。仅显式调用或由 xiyou 总入口按需选用。"
 metadata:
-  version: "1.3.1"
+  version: "1.3.2"
   family: "xiyou"
 ---
 

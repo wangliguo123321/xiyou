@@ -45,7 +45,7 @@ python3 scripts/inspect_pr_checks.py --repo OWNER/REPO --pr 123
 
 退出 **0** 仅表示 `ci_status=passed` 且 `collection.status=complete`；退出 **1** 仅表示 `failed+complete`；其他组合全部退出 **2**。因此已知失败但日志取不全仍是 2，不能误称尚无失败。合法请求中的工具缺失、超时、坏 JSON 等运行错误仍输出此结构；参数非法由 argparse 输出 stderr 并退出 2。用户主动终止或操作系统强制结束不保证有完整 JSON。
 
-PR/Actions 元数据、检查列表和 rollup 若无法在当前解释器中解码，分别沿既有 `invalid_json`、`checks_unavailable_or_invalid_json`、`rollup_invalid_json` 路径报告；包括过深响应触发的 `RecursionError`。这不证明响应违反 JSON 语法，也不统一限制可接受的嵌套深度。单项 Actions 元数据失败仍保留其它检查、已知失败类别及末尾 PR 身份回读，不读取未核实绑定的日志；初始 PR 身份不可用仍停止采集。不会提高递归限额或自动重试。
+PR/Actions 元数据、检查列表和 rollup 若无法在当前解释器中解码，分别沿既有 `invalid_json`、`checks_unavailable_or_invalid_json`、`rollup_invalid_json` 路径报告；包括过深响应触发的 `RecursionError`，以及数值解析后超出本工具有限浮点表示范围。后者在读取边界拒绝，避免输出非标准的 `Infinity`。这不证明响应违反 JSON 语法：例如 `1e400` 本身符合 JSON 数值语法，但本工具不支持任意数值范围；也不统一限制可接受的嵌套深度。单项 Actions 元数据失败仍保留其它检查、已知失败类别及末尾 PR 身份回读，不读取未核实绑定的日志；初始 PR 身份不可用仍停止采集。不会提高递归限额或自动重试。
 
 ## Actions 身份与日志
 
@@ -71,4 +71,4 @@ PR REST 返回的 `base.repo.id/full_name`、PR 编号与 HTTPS URL 必须匹配
 
 保留退休原源的检查读取、Actions 元数据与日志、关键词片段及外部 provider 边界；移除当前分支推断、任意 host 路径匹配、整 run 优先替代 job、未知当通过和非零丢弃合法 JSON。增加资源限量与身份快照，但不引入新人物、通用执行框架、后台监听或自动修复。此版本的实际边界以独立验收证据为准，来源官方身份不等于稳定效果已经成立。
 
-2026-10-27：参考固定 `python-error-handling` 的具体异常与部分失败方法，将解码递归错误隔离在上述三个读取边界，复用原有错误及完整性状态；具体异常名称和捕获点是本地适配，原源没有此补丁。不照搬宽泛捕获、依赖或批处理框架。来源及随包 MIT 见 [上游致谢](lineage.md) 与 [NOTICE](../NOTICE.txt)。
+2026-10-27：参考固定 `python-error-handling` 的边界验证、具体异常与部分失败方法，将解码递归错误及不可表示为有限浮点数的响应隔离在上述三个读取边界，复用原有错误及完整性状态；具体检查和捕获点是本地适配，原源没有这些补丁。不照搬宽泛捕获、依赖或批处理框架。来源及随包 MIT 见 [上游致谢](lineage.md) 与 [NOTICE](../NOTICE.txt)。
