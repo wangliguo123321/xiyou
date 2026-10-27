@@ -5,3 +5,11 @@ Copyright 2026 xiyou contributors
 上游原文通过各技能 references/lineage.md 中的固定提交链接提供。
 对应版权与许可证保留在各技能的 licenses/ 和 NOTICE.txt 中。
 项目新增组织与适配内容采用 Apache License 2.0；上游内容保留其原有许可。
+
+SARIF 等级观察为独立 CC-BY-SA-4.0 改编单元：
+skills/xiyou-shaseng/scripts/inspect_sarif_levels.py
+skills/xiyou-shaseng/references/sarif-levels.md
+归属 Trail of Bits；插件声明作者 Axel Mierczuk、Paweł Płatek，等级继承维护者 Dan Guido。
+固定原源 trailofbits/skills@196a9073ab10d35bacf111f945e02c00b2c6883a，修改日期与取舍见对应 NOTICE.txt / lineage.md。
+完整同元素许可位于 skills/xiyou-shaseng/licenses/sarif-parsing.txt。
+上述两份文件不适用本项目新增内容的默认 Apache-2.0 声明，其余独立文件许可保持不变；不声明原作者背书或商标授权。

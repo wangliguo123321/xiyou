@@ -55,3 +55,12 @@ https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06
 https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/python-development/skills/python-performance-optimization/references/details.md
 许可证：licenses/python-performance.txt（MIT 原文）
 参考标准库 profiling 方法核对本地输出成本，将 inspect_pr_comments.py 的机器 JSON 改为紧凑格式，并更新版本和必要引用。具体 JSON 格式修正不来自原源，不复制其性能倍率或内存泄漏结论；原输入采集方法及 Apache-2.0 归因继续保留。
+
+Trail of Bits / skills（SARIF 等级观察独立法器）
+固定版本：196a9073ab10d35bacf111f945e02c00b2c6883a
+https://github.com/trailofbits/skills/blob/196a9073ab10d35bacf111f945e02c00b2c6883a/plugins/static-analysis/skills/sarif-parsing/SKILL.md
+https://github.com/trailofbits/skills/blob/196a9073ab10d35bacf111f945e02c00b2c6883a/plugins/static-analysis/skills/sarif-parsing/resources/sarif_helpers.py
+归属：Trail of Bits；插件声明作者 Axel Mierczuk、Paweł Płatek，等级继承修复维护者 Dan Guido。此为来源归属，不声明官方背书或商标授权。
+独立改编文件：scripts/inspect_sarif_levels.py、references/sarif-levels.md。
+上述两份独立改编材料采用 CC-BY-SA-4.0，完整许可原字节见 licenses/sarif-parsing.txt；不将其改标 Apache/MIT，其他独立组件保持其原有许可。
+2026-10-28 改动：保留 run 内 driver 规则查找、kind/显式等级/规则默认/缺省 warning 层次；增加有限输入校验、资源上限、未知/未解释上下文与原始/归一计数、明细截断和结构化退出协议。未移植扫描器、指纹去重、合并/diff、SARIF重写、CI发布或未完整支持的规则扩展/覆盖/抑制政策；不执行上游程序。修改与范围详见 references/lineage.md。

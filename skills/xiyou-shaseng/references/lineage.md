@@ -22,3 +22,11 @@ PR 采集以沙僧的输入整理及交接职责承接。2026-10-24 依据固定
 2026-10-26 对既有 [PR 审查输入采集](github-review-comments.md)补齐有限浮点与递归解码错误处理，原字段、分页、身份及输出接口不变。此为上述固定源的宿主适配修正，沿用 Apache-2.0 与作者归因；不声称上游原实现已有修复或生产故障已发生。
 
 2026-10-26 参考 [wshobson/agents 的 Python 性能方法](https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/plugins/python-development/skills/python-performance-optimization/SKILL.md)（固定提交 `0874a27b17a22e2b7c2e2bcd725768e0803cad06`，作者 Seth Hobson，[MIT 全文](../licenses/python-performance.txt)），采用标准库 profile 归因来选择评论输入的紧凑 JSON 输出。具体格式为宿主实现选择，不引入通用调优流程、源程序或新运行依赖。
+
+## SARIF 等级观察独立法器
+
+- 2026-10-28 基于 Trail of Bits [sarif-parsing](https://github.com/trailofbits/skills/blob/196a9073ab10d35bacf111f945e02c00b2c6883a/plugins/static-analysis/skills/sarif-parsing/SKILL.md) 与 [sarif_helpers.py](https://github.com/trailofbits/skills/blob/196a9073ab10d35bacf111f945e02c00b2c6883a/plugins/static-analysis/skills/sarif-parsing/resources/sarif_helpers.py) 改编等级观察法器。固定完整提交 `196a9073ab10d35bacf111f945e02c00b2c6883a`；helper blob `a817f0386b5ebabd81d571da95b801d68025b535`，SHA256 `06d8e63849bd2b93baf31b23a33550447eed2ac457c2687f173933039e5ad247`。
+- 归属 Trail of Bits；插件声明作者 Axel Mierczuk、Paweł Płatek，具体等级继承维护者 Dan Guido。其公开 Issue #262 与合并 PR #271 针对缺少 result.level 时误漏继承等级的修复、fixtures 和回归支持方法资格，不替代本地验收，不称上游私有生产事故或全库效果。
+- 新增独立 `scripts/inspect_sarif_levels.py` 与 [使用引用](sarif-levels.md) 采用 [CC-BY-SA-4.0](../licenses/sarif-parsing.txt)，保留完整原许可、归属、固定来源和修改说明；其他独立文件按其原有声明。这是独立法器聚合，不把改编材料改标 Apache/MIT，也不宣称原作者背书。
+- 保留每个 run 的 driver 上下文、有效 kind 及显式/规则默认/缺省等级顺序；不采用会跨 run 覆盖规则的全局映射、去重、路径归一、合并/重写或 CI 门禁。null兼容缺失、非法/冲突与未支持继承的保守未知、配额和机器结果是本地明确定义，不宣称完整 SARIF 验证。
+- 不运行扫描器或来源程序，不读取 URI/artifact 指向文件，不按报告确认漏洞。原始显式等级计数、driver 规则定义计数与归一后的结果计数含义不同；解析完成/零退出不是无 error 结果或安全结论。
