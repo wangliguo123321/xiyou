@@ -1,8 +1,8 @@
 ---
 name: xiyou-taiyi
-description: "发现并评估成熟的公开 Skills，为现有人物炼化法器，或创建职责独立的新人物。显式调用或由 xiyou 总入口按需选用。"
+description: "发现并评估成熟的公开 Skills，为现有人物炼化法器，或创建职责独立的新人物；按请求导出本地技能分发包。显式调用或由 xiyou 总入口按需选用。"
 metadata:
-  version: "1.6.0"
+  version: "1.7.0"
   family: "xiyou"
 ---
 
@@ -21,6 +21,8 @@ metadata:
 交付前需重复检查技能元数据时，按 [创建与评测中的结构检查](references/skill-creator.md#结构检查) 使用 `scripts/validate_skill.rb`，显式指定一个或多个技能目录；格式通过不代表技能效果通过。
 
 已有固定 CLI 快照、需重复核查正文命令与 flag 时，按需读 [正文 CLI 对表检查](references/cli-doc-check.md)，显式指定根命令、TSV 与文档路径。辅助只做离线有限语法检查，计数与无诊断不代表当前 CLI 或全部 shell 正确。
+
+用户明确需要导出本地技能包时，读 [本地技能打包](references/skill-package.md)，指定实际技能目录与全新输出位置。它先核元数据，再保留可分发文件的目录布局和本地定制；不覆盖已有包，不安装或发布。普通发现、评估和元数据检查不触发打包。
 
 ## 工作方法
 
