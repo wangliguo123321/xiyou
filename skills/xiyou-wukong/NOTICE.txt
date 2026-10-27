@@ -36,3 +36,10 @@ Copyright (c) 2024 Seth Hobson
 许可证：licenses/python-error-handling.txt（完整原 MIT 字节，保留版权与许可条件）
 修改日期：2026-10-27。技能最初贡献者 M. A.（mohammadaffaneh），插件作者 Seth Hobson。仅吸收具体异常在操作边界处理、保留其它可用结果的方法；在已有三个 JSON 解码捕获点加入 RecursionError，复用既有错误和部分采集状态。异常名称、捕获点及其接口语义为本地适配，原源未自带此补丁；不复制宽泛批处理异常捕获、依赖、自动重试或通用异常框架。
 同日数值边界修正：沿用上述边界验证和失败隔离方法，在同三个解码调用中显式检查浮点转换结果的有限性，防止合法指数 token 溢出后被输出成非标准 Infinity。原有错误及完整性判定保留；检查函数与数值范围选择为本地适配，不是原源现成代码或任意精度 JSON 实现。
+
+ofershap/mcp-server-sqlite（离线 SQLite 结构与查询计划取证方法）
+固定版本：a3b0323ce23521190572460dff944722b0036b3c
+https://github.com/ofershap/mcp-server-sqlite/blob/a3b0323ce23521190572460dff944722b0036b3c/skills/sqlite-query/SKILL.md
+https://github.com/ofershap/mcp-server-sqlite/blob/a3b0323ce23521190572460dff944722b0036b3c/src/sqlite.ts
+许可证：licenses/sqlite-query.txt（完整 MIT 原字节，Copyright (c) 2026 Ofer Shapira）
+2026-10-28 改动：保显式单库、引擎只读、原生结构/EQP 与 finally 关闭方法，改写为 Python 标准库入口。只接稳定离线文件，不执行原用户查询、不提供写模式/自动优化/全库COUNT或MCP部署；绑定、行/字节预算、稳定文件核验、主库/函数授权限制和结构化错误/partial 均为本地新增，未运行原程序，不声称上游具备这些保证。具体边界见 references/sqlite-evidence.md 及 lineage.md。
