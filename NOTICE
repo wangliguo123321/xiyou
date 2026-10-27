@@ -13,3 +13,10 @@ skills/xiyou-shaseng/references/sarif-levels.md
 固定原源 trailofbits/skills@196a9073ab10d35bacf111f945e02c00b2c6883a，修改日期与取舍见对应 NOTICE.txt / lineage.md。
 完整同元素许可位于 skills/xiyou-shaseng/licenses/sarif-parsing.txt。
 上述两份文件不适用本项目新增内容的默认 Apache-2.0 声明，其余独立文件许可保持不变；不声明原作者背书或商标授权。
+
+Terraform 状态库存为独立 MPL-2.0 适配单元：
+skills/xiyou-wukong/scripts/inspect_terraform_state.py
+skills/xiyou-wukong/references/terraform-state-inventory.md
+Copyright IBM Corp. 2026（原 Skill 声明），来源发布者 HashiCorp；完整归属与修改说明见该技能 NOTICE.txt / lineage.md。
+固定原源 hashicorp/agent-skills@f706481af9b8fedb66de909f6243ad29601afa0c；完整 MPL-2.0 位于 skills/xiyou-wukong/licenses/terraform-refactor.txt。
+上述两文件按 MPL-2.0 提供，作为独立单元聚合，不适用新增内容的默认 Apache-2.0；其余独立文件许可不变，不暗示原作者背书。

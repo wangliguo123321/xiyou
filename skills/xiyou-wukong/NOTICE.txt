@@ -43,3 +43,12 @@ https://github.com/ofershap/mcp-server-sqlite/blob/a3b0323ce23521190572460dff944
 https://github.com/ofershap/mcp-server-sqlite/blob/a3b0323ce23521190572460dff944722b0036b3c/src/sqlite.ts
 许可证：licenses/sqlite-query.txt（完整 MIT 原字节，Copyright (c) 2026 Ofer Shapira）
 2026-10-28 改动：保显式单库、引擎只读、原生结构/EQP 与 finally 关闭方法，改写为 Python 标准库入口。只接稳定离线文件，不执行原用户查询、不提供写模式/自动优化/全库COUNT或MCP部署；绑定、行/字节预算、稳定文件核验、主库/函数授权限制和结构化错误/partial 均为本地新增，未运行原程序，不声称上游具备这些保证。具体边界见 references/sqlite-evidence.md 及 lineage.md。
+
+HashiCorp / agent-skills：离线 Terraform 状态库存独立法器
+Copyright IBM Corp. 2026（原 Skill metadata 声明）
+固定源：https://github.com/hashicorp/agent-skills/blob/f706481af9b8fedb66de909f6243ad29601afa0c/plugins/terraform/skills/refactor-module/SKILL.md
+来源发布者及插件作者：HashiCorp；具体稳定状态接口与敏感值方法改动维护者 Lee Fowler，并署 Andy Baran、Tyler Lynch，不视作全部代码独占署名。
+许可证：licenses/terraform-refactor.txt（完整原 MPL-2.0）；原仓全树仅根许可、无子许可或 NOTICE。
+独立改编文件：scripts/inspect_terraform_state.py、references/terraform-state-inventory.md，均按 MPL-2.0 分发，不适用系列新增组织内容的默认 Apache-2.0；其他独立文件许可不变。
+2026-10-28 修改：取迁移前枚举地址、偏好稳定 show-json 接口及不回显属性值方法，新写显式本地文件、层次库存、Current/Deposed 对象分类、身份/限额/错误协议；原源没有此脚本。不继承 Terraform、state mv、init、plan/apply 或云操作，不输出原资源值，不宣称迁移安全、上游效果或 HashiCorp/IBM 背书。
+格式另核官方文档与 hashicorp/terraform@ae75cbe434a7dbcca310b11f6b5d9bc5dfdb3380 的行为事实；其 BUSL 源实现和测试数据未复制或分发进产品。
