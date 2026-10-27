@@ -199,7 +199,7 @@ xiyou 从已有的优秀方法出发，保留有用的流程，再针对角色�
 | [悟空](skills/xiyou-wukong/references/lineage.md) | Superpowers `brainstorming`、`systematic-debugging` |
 | [哪吒](skills/xiyou-nezha/references/lineage.md) | ECC `iterative-retrieval`、`code-explorer`；`i-have-adhd` 的行动优先表达 |
 | [八戒](skills/xiyou-bajie/references/lineage.md) | Anthropic 代码简化、ECC 复用优先、Matt Pocock 双轴审查、Superpowers 评审建议核验、gstack 范围保持与缩减 |
-| [沙僧](skills/xiyou-shaseng/references/lineage.md) | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证 |
+| [沙僧](skills/xiyou-shaseng/references/lineage.md) | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证；Trail of Bits SARIF 等级观察（独立 CC-BY-SA-4.0 法器） |
 | [太乙](skills/xiyou-taiyi/references/lineage.md) | Vercel `find-skills`、Anthropic `skill-creator`、ECC 技能盘点、Darwin 匿名成对比较与有界优化 |
 | [修炼（法器）](skills/xiyou-xiulian/references/lineage.md) | talki `prompt-optimizer` 的保真改写、Max Simchowitz `prompt-improving` 的上下文澄清（均为 MIT 许可） |
 | [照影镜（法器）](skills/zhaoyingjing/references/lineage.md) | Alibaba OpenCodeReview 的差异审查、全量扫描、委托模式、规则、会话与集成能力（Apache-2.0） |
@@ -225,3 +225,5 @@ GitHub 中的改进经合并后成为共享版本。已经安装到电脑里的�
 ## 许可
 
 本项目新增组织与适配内容采用 [Apache-2.0](LICENSE)。各上游内容保留其原有许可，版权声明及许可证随对应技能提供，详见 [NOTICE](NOTICE)。
+
+独立的 [SARIF 等级观察引用](skills/xiyou-shaseng/references/sarif-levels.md) 与 [对应实现](skills/xiyou-shaseng/scripts/inspect_sarif_levels.py) 是 Trail of Bits 方法的改编，按 [CC-BY-SA-4.0](skills/xiyou-shaseng/licenses/sarif-parsing.txt) 分发；此为上述默认声明的明确文件例外。归属与修改说明随法器提供，其余独立组件的许可不变。
