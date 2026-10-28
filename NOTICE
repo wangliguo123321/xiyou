@@ -36,3 +36,10 @@ Trail of Bits / Eric Quintero：npm 锁定树声明盘点
 许可证：CC-BY-SA-4.0，完整原根LICENSE Git blob 3b7b82d0da2db857eda1a798dbd908ea136f07b5，20131字节。
 2026-10-29 修改：独立适配 references/npm-lock-inventory.md 和 scripts/inspect_npm_lock.py，保全锁定树、声明版本/dev与registry前缀+integrity非空的区分；新增显式v2/v3支持、位置和排序、单列排除、有界只读/实际字节身份、避免输出原resolved/integrity。两文件按CC-BY-SA-4.0分发，完整许可见 skills/xiyou-wukong/licenses/npm-lock-inventory.txt（技能内为 licenses/npm-lock-inventory.txt）。
 原源attested仅字段存在与URL前缀，测试用sha512-fake；本适配不声称hash/SRI/来源真实性验证，不复制在线OSV、ACL、Scorecard、鉴权或风险报告/放行、安装构建。原源无本适配的两文件diff方法或接口；其它独立组件许可不变。
+
+npm 打包计划清单核对：上游来源与独立适配
+来源：https://github.com/YottaMeta/yotta-publish-guard/blob/d36044d4d7fc48c1f8cfec3f9827639ddcc49e35/SKILL.md
+必要方法：同提交 scripts/yotta_publish_guard.py::_npm_pack_files 与 cmd_pack（478–534行）及 references/check-items.md 第5节。
+Copyright (c) 2026 YottaMeta。完整原MIT见 skills/xiyou-taiyi/licenses/npm-pack-check.txt（技能内licenses/npm-pack-check.txt），完整原品牌NOTICE见对应npm-pack-check-NOTICE.txt；原名仅用于来源署名，本法器与YottaMeta官方无关联，不使用原品牌作为派生名称、不暗示认可/维护。
+2026-10-29 修改：新增 references/npm-pack-check.md 与 scripts/inspect_npm_pack.py，只吸收npm返回路径清单中的必需件/缓存名核对，独立改为显式单包JSON输入和required参数、保全部路径、完整段缓存模式、严格结构/限额/失败/身份协议。新增适配按项目Apache-2.0，保留上游MIT归属与NOTICE；不声称兼容上游CLI或继承其发布门。
+未复制或运行原执行器/测试，不采原npm调用、目录近似回退、多包union、版本正则框架、安装/hook/force/publish。本轮未运行原测试；所读固定publish workflow未见显式测试步骤，不把源测试或CI当本法器通过证据。作者NOTICE中的自研/实战为作者声明，未独立认证原完整工具或效果。其它组件许可不变。
