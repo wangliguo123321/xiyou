@@ -159,6 +159,8 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 | 有独立、长期有用的职责 | 选择贴合的人物，新增一个 Skill |
 | 缺乏价值或无法核验 | 说明原因，暂不采用 |
 
+已有单包 npm 打包 JSON 清单时，太乙可按明确的必需路径做[清单核对](skills/xiyou-taiyi/references/npm-pack-check.md)，保留完整声明路径、缺件与缓存名匹配；不运行 npm，不将计划清单当最终归档或发布证明。
+
 例如，一套更好的假设验证方法适合给悟空，一套更清楚的修改决策记录方法适合给沙僧。只有出现现有人物难以自然承接的独立职责，才考虑新增人物。
 
 炼化需要实际任务验证。太乙会先固定旧版与验收标准，再对匿名成果做成对比较；每个目标默认最多两轮，持平、证据不足或关键回归失败就保留稳定版。角色更多、文件更长，都不能单独证明能力变好了。
@@ -218,7 +220,7 @@ xiyou 从已有的优秀方法出发，保留有用的流程，再针对角色�
 | [哪吒](skills/xiyou-nezha/references/lineage.md) | ECC `iterative-retrieval`、`code-explorer`；`i-have-adhd` 的行动优先表达 |
 | [八戒](skills/xiyou-bajie/references/lineage.md) | Anthropic 代码简化、ECC 复用优先、Matt Pocock 双轴审查、Superpowers 评审建议核验、gstack 范围保持与缩减 |
 | [沙僧](skills/xiyou-shaseng/references/lineage.md) | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证；OpenAI 历史公开 PDF 逐页渲染验收；HeyGen HyperFrames 的成品视频抽帧验收；Marmelab React-admin 的语言目录回退合成；AgriciDaniel claude-blog 的 JSON/HTML 数据块编码；Trail of Bits SARIF 等级观察（独立 CC-BY-SA-4.0 法器） |
-| [太乙](skills/xiyou-taiyi/references/lineage.md) | Vercel `find-skills`、Anthropic `skill-creator`、ECC 技能盘点、Darwin 匿名成对比较与有界优化 |
+| [太乙](skills/xiyou-taiyi/references/lineage.md) | Vercel `find-skills`、Anthropic `skill-creator`、ECC 技能盘点、Darwin 匿名成对比较与有界优化；YottaMeta 的 npm 打包名单检查子法 |
 | [修炼（法器）](skills/xiyou-xiulian/references/lineage.md) | talki `prompt-optimizer` 的保真改写、Max Simchowitz `prompt-improving` 的上下文澄清（均为 MIT 许可） |
 | [照影镜（法器）](skills/zhaoyingjing/references/lineage.md) | Alibaba OpenCodeReview 的差异审查、全量扫描、委托模式、规则、会话与集成能力（Apache-2.0） |
 

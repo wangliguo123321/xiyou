@@ -1,8 +1,8 @@
 ---
 name: xiyou-taiyi
-description: "发现并评估成熟的公开 Skills，为现有人物炼化法器，或创建职责独立的新人物；按请求导出本地技能分发包。显式调用或由 xiyou 总入口按需选用。"
+description: "发现并评估成熟的公开 Skills，为现有人物炼化法器，或创建职责独立的新人物；按请求导出本地技能分发包，或核对已有 npm 打包清单。显式调用或由 xiyou 总入口按需选用。"
 metadata:
-  version: "1.7.0"
+  version: "1.8.0"
   family: "xiyou"
 ---
 
@@ -23,6 +23,8 @@ metadata:
 已有固定 CLI 快照、需重复核查正文命令与 flag 时，按需读 [正文 CLI 对表检查](references/cli-doc-check.md)，显式指定根命令、TSV 与文档路径。辅助只做离线有限语法检查，计数与无诊断不代表当前 CLI 或全部 shell 正确。
 
 用户明确需要导出本地技能包时，读 [本地技能打包](references/skill-package.md)，指定实际技能目录与全新输出位置。它先核元数据，再保留可分发文件的目录布局和本地定制；不覆盖已有包，不安装或发布。普通发现、评估和元数据检查不触发打包。
+
+用户已有单包 `npm pack` JSON 清单、需重复检查指定必需路径与缓存名模式时，读 [npm 打包计划清单核对](references/npm-pack-check.md)。只读取声明，不运行 npm 或回退扫描目录；清单条件满足不代表最终归档内容、许可齐备或可发布。
 
 ## 工作方法
 

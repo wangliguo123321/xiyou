@@ -49,3 +49,11 @@
 - 吸收独立成对比较、真实任务验证、仅保留有证据收益和有界优化；将匿名成果比较并入已有创建与评测法器。
 - 不吸收固定评分权重、逐轮强制确认、自动全量扫描、第三方脚本或自动更新。沿用用户原授权，平票与未知不采用，每目标默认最多两轮。
 - 原文对论文、评测准确率及收益的描述未经本项目独立核验，不作为已确认事实或本技能效果依据；来源固定仅证明材料可追溯。
+
+## npm 打包计划清单核对
+
+- 原源 [YottaMeta / yotta-publish-guard](https://github.com/YottaMeta/yotta-publish-guard/blob/d36044d4d7fc48c1f8cfec3f9827639ddcc49e35/SKILL.md)，固定提交 `d36044d4d7fc48c1f8cfec3f9827639ddcc49e35`，原版本0.4.3。必要 [pack实现](https://github.com/YottaMeta/yotta-publish-guard/blob/d36044d4d7fc48c1f8cfec3f9827639ddcc49e35/scripts/yotta_publish_guard.py) 478–534 行和 [check-items.md](https://github.com/YottaMeta/yotta-publish-guard/blob/d36044d4d7fc48c1f8cfec3f9827639ddcc49e35/references/check-items.md) 第5节取npm真实返回的files路径名单，查必需件与缓存名。
+- Copyright (c) 2026 YottaMeta；仅确认发布组织/路径提交，不编个人原创作者。完整原 [MIT](../licenses/npm-pack-check.txt)1066B与 [品牌NOTICE](../licenses/npm-pack-check-NOTICE.txt)901B保原字节。本法器独立命名，与YottaMeta官方无关联；原品牌仅署名，不暗示认可/维护。
+- 2026-10-29 改编 [使用引用](npm-pack-check.md)和Python标准库JSON消费者；新增适配按项目Apache-2.0并保原MIT/NOTICE。显式required取代上游固定四模板文件；单包门、原路径全保、完整路径段缓存规则、严格类型/资源/退出码/字节身份为宿主合同，不冒原源已有的JSON-only接口。
+- 所读原pack函数调用npm未传ignore-scripts、回退先过滤缓存、多包名单union，创建的临时cache在该段未见对应回收；本法器完全不执行命令或扫目录。本轮未运行原测试，所读固定publish workflow未见显式测试步骤，不把源测试或CI作本法器通过证据；版本正则与SKILL顶层version也不套到本系列metadata.version，不采安装/钩子/三渠道发布或force。原源NOTICE中的实战/自研描述未独立验证。
+- [npm官方pack说明](https://docs.npmjs.com/cli/v11/commands/npm-pack/)将dry-run描述为计划输出，并单独规定ignore-scripts；页面当前v11系列不当本机11.12.1的精确同版文档。本轮生产者链另做实际验证，法器本身不依赖npm，也不把输入真实性、最终归档/内容/许可证或发布安全当作已检查。

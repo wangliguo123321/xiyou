@@ -56,3 +56,10 @@ anthropics/skills（本地技能打包方法）
 https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/scripts/package_skill.py
 许可证：licenses/skill-creator.txt（现有完整 Apache-2.0，Copyright 2026 Anthropic, PBC.，原字节保留）
 2026-10-27 改动：新增独立本地导出入口，保先结构校验、整个可分发目录及相对布局的方法；使用同包 Ruby 校验器，补捕获字节、有界读取、排除 Git 元数据、拒外链/源内或已有输出、源外私有暂存与独占发布、失败回收和 JSON 结果。失败不删除最终输出路径。安全失败与接口为本地适配，原脚本未执行、不声明其安全或效果保证。该入口不改变原只读校验器，不安装/发布或自动核许可、引用闭包。
+
+npm 打包计划清单核对：上游来源与独立适配
+来源：https://github.com/YottaMeta/yotta-publish-guard/blob/d36044d4d7fc48c1f8cfec3f9827639ddcc49e35/SKILL.md
+必要方法：同提交 scripts/yotta_publish_guard.py::_npm_pack_files 与 cmd_pack（478–534行）及 references/check-items.md 第5节。
+Copyright (c) 2026 YottaMeta。完整原MIT见 skills/xiyou-taiyi/licenses/npm-pack-check.txt（技能内licenses/npm-pack-check.txt），完整原品牌NOTICE见对应npm-pack-check-NOTICE.txt；原名仅用于来源署名，本法器与YottaMeta官方无关联，不使用原品牌作为派生名称、不暗示认可/维护。
+2026-10-29 修改：新增 references/npm-pack-check.md 与 scripts/inspect_npm_pack.py，只吸收npm返回路径清单中的必需件/缓存名核对，独立改为显式单包JSON输入和required参数、保全部路径、完整段缓存模式、严格结构/限额/失败/身份协议。新增适配按项目Apache-2.0，保留上游MIT归属与NOTICE；不声称兼容上游CLI或继承其发布门。
+未复制或运行原执行器/测试，不采原npm调用、目录近似回退、多包union、版本正则框架、安装/hook/force/publish。本轮未运行原测试；所读固定publish workflow未见显式测试步骤，不把源测试或CI当本法器通过证据。作者NOTICE中的自研/实战为作者声明，未独立认证原完整工具或效果。其它组件许可不变。
