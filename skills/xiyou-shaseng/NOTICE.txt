@@ -84,3 +84,9 @@ https://github.com/marmelab/react-admin/blob/0c33d9c3c27cc4bf97e11f56080c5bfe182
 https://github.com/marmelab/react-admin/blob/0c33d9c3c27cc4bf97e11f56080c5bfe182f2f2a/packages/ra-core/src/i18n/TranslationUtils.ts
 许可证：licenses/react-admin-i18n.txt（根完整MIT原字节）
 2026-10-28：新增 references/locale-fallback.md 与本地新写 scripts/merge_locale_catalogs.py，吸收英文底层/后层覆盖/递归补缺/保留额外消息的方法；收窄为兼容对象和字符串的独立JSON合成，新增有界输入、字面保真、内容身份与独占输出。未运行原程序；不携React/Lodash/Polyglot，不声称原框架或上游作者背书，完整边界见lineage。
+
+AgriciDaniel/claude-blog（正式 blog-schema 中 JSON/HTML 数据上下文编码方法）
+Copyright (c) 2025-2026 AgriciDaniel
+https://github.com/AgriciDaniel/claude-blog/blob/354442348815a7f0327077ad89af2c43cf4b4ab4/skills/blog-schema/SKILL.md
+许可证：licenses/blog-schema.txt（根完整MIT原字节）
+2026-10-28：新增 references/json-script-data.md 与本地新写 scripts/embed_json_data.py；保真实JSON编码和script数据上下文转义，按正式Skill处理全部literal <。原_build_json_ld只处理</，差异明确保留；本接口为已有JSON到application/json片段的宿主适配，非完整源渲染器、JSON-LD语义或SEO保证。原程序/源测试未执行，不携其他编辑/研究/FLOW方法或媒体/字体。原NOTICE归属已核见lineage。

@@ -49,3 +49,11 @@ PR 采集以沙僧的输入整理及交接职责承接。2026-10-24 依据固定
 2026-10-28：参考 [marmelab/react-admin 的 i18n Skill](https://github.com/marmelab/react-admin/blob/0c33d9c3c27cc4bf97e11f56080c5bfe182f2f2a/.agents/skills/i18n/SKILL.md)，及同版 [TranslationUtils.ts](https://github.com/marmelab/react-admin/blob/0c33d9c3c27cc4bf97e11f56080c5bfe182f2f2a/packages/ra-core/src/i18n/TranslationUtils.ts) 的 `mergeTranslations` 与 [真实测试](https://github.com/marmelab/react-admin/blob/0c33d9c3c27cc4bf97e11f56080c5bfe182f2f2a/packages/ra-core/src/i18n/TranslationUtils.spec.ts)，采用默认语言作底层、后层递归覆盖且保留缺键和额外消息的方法。Copyright (c) 2016-present, Francois Zaninotto, Marmelab，完整 [MIT](../licenses/react-admin-i18n.txt) 随附。
 
 [回退目录引用](locale-fallback.md)及本地新写 `merge_locale_catalogs.py` 收窄为两份兼容对象/字符串 JSON 消息树。输出为可消费的独立 JSON；输入类型/形状与资源限制、内容身份和独占发布是宿主约束，不声称原 Lodash 会拒绝形状冲突或提供此 Python 接口。键与字符串按 JSON 数据字面处理，不采用 JavaScript 原型/属性访问，不模拟 TS `satisfies`、语言选择、插值、Polyglot 复数或完整 Lodash 语义。未执行原源程序，不携 React/Polyglot/Lodash 依赖。
+
+## HTML 非执行 JSON 数据块
+
+2026-10-28：采用 [AgriciDaniel/claude-blog 正式 blog-schema Skill](https://github.com/AgriciDaniel/claude-blog/blob/354442348815a7f0327077ad89af2c43cf4b4ab4/skills/blog-schema/SKILL.md) Step 9 的真实 JSON 编码与 HTML script 上下文转义方法，必要实现依据为同版 `scripts/blog_render.py:_build_json_ld`（488–509）及 `tests/test_blog_delivery_contract.py:test_xss_via_jsonld_is_escaped`（235–255）。Copyright (c) 2025-2026 AgriciDaniel，完整 [MIT](../licenses/blog-schema.txt) 随附。
+
+[数据块引用](json-script-data.md)与本地新写 `embed_json_data.py` 选择正式 Skill 要求的全部 literal `<` 转义；原函数只转义 `</`，并非同等完整保证。输入改为已有 JSON，输出固定为普通 `application/json` 数据块，ID、类型/数值、资源、内容身份及独占发布为宿主约束，不声称原源已提供此工具或全浏览器/全页面安全。未运行上游程序，不采用博客制作、SEO、富结果或 Schema.org 验证。
+
+原根 [NOTICE](https://github.com/AgriciDaniel/claude-blog/blob/354442348815a7f0327077ad89af2c43cf4b4ab4/NOTICE) 已完整核读，列出的 impeccable 编辑启发式、last30days 研究及 FLOW 提示内容未在本窄方法中采用。本次不取 Tessl 链接到的 `brain/.raw/sources/...` 快照作为原源；其父与更近许可须分层判断，不能仅据父声明推断无许可。
