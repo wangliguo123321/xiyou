@@ -52,3 +52,12 @@ Copyright IBM Corp. 2026（原 Skill metadata 声明）
 独立改编文件：scripts/inspect_terraform_state.py、references/terraform-state-inventory.md，均按 MPL-2.0 分发，不适用系列新增组织内容的默认 Apache-2.0；其他独立文件许可不变。
 2026-10-28 修改：取迁移前枚举地址、偏好稳定 show-json 接口及不回显属性值方法，新写显式本地文件、层次库存、Current/Deposed 对象分类、身份/限额/错误协议；原源没有此脚本。不继承 Terraform、state mv、init、plan/apply 或云操作，不输出原资源值，不宣称迁移安全、上游效果或 HashiCorp/IBM 背书。
 格式另核官方文档与 hashicorp/terraform@ae75cbe434a7dbcca310b11f6b5d9bc5dfdb3380 的行为事实；其 BUSL 源实现和测试数据未复制或分发进产品。
+
+GitHub awesome-copilot：离线 workflow uses 引用观察
+Copyright GitHub, Inc.（原 LICENSE 无年份，不补年份）
+固定源：https://github.com/github/awesome-copilot/blob/98b45a78d3ed316e78f005b60594d5c4a50588e3/skills/github-actions-hardening/SKILL.md
+必要方法：https://github.com/github/awesome-copilot/blob/98b45a78d3ed316e78f005b60594d5c4a50588e3/skills/github-actions-hardening/references/supply-chain.md
+许可证：licenses/github-actions-hardening.txt（完整原 MIT 字节）；相关目录/祖先无子许可或 NOTICE。
+该 Skill 是 GitHub 组织中的社区贡献，引入者 Amir / AmirhosseinHonardoust，review ownership 为 awesome-copilot 内容维护团队；不当作 GitHub 产品强制政策、全体代码单人署名或官方背书。
+2026-10-28 修改：取 Step 5 逐 uses 盘点及 SHA/命名引用区分方法，本地新写 references/workflow-refs.md 与 scripts/inspect_workflow_refs.rb 的原生 YAML AST、范围位置/有限分类/未知与资源协议。新增适配沿系列默认 Apache-2.0 并保原 MIT 通知；原源没有此 helper，不移植原程序。
+未采用原源完整加固流程、固定严重等级、自动改 pin/Dependabot/权限、远端解析、工作流运行或安全放行。40hex/digest 只字面形态，未知不猜；本法器与已有 MPL2 Terraform 独立单元分开，后者许可不变。

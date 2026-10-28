@@ -30,3 +30,10 @@ CI 解码错误隔离采用上述 `python-error-handling` 的边界验证、具�
 - [使用引用](terraform-state-inventory.md)与独立 `scripts/inspect_terraform_state.py` 按 MPL-2.0 分发，默认 Apache 声明不覆盖这两文件，其余独立组件许可保持。原 Skill 没有 helper；文件输入/身份、完整递归、对象分类、未知/限额和 JSON 协议为本地新写，不称上游程序移植或一般模型收益。
 - 格式依据 [官方 JSON 输出](https://developer.hashicorp.com/terraform/internals/json-format)及 [show 命令](https://developer.hashicorp.com/terraform/cli/commands/show)；另只读核固定 `hashicorp/terraform@ae75cbe434a7dbcca310b11f6b5d9bc5dfdb3380` 的 `internal/command/jsonstate/state.go`：合法最小输出与 Current/Deposed 逐项列举，处理网站 current-only 说法的演进差异。该 BUSL 实现及官方测试 JSON 仅临时验证/事实参考，未写入产品或复制实现。
 - 只观察已导出文档声明，地址不按点拆/去重，保留对象分类但不输出属性或 deposed_key。完整解析不证明云端真实性/迁移安全；许可与方法资格不替代本地实际验收。
+
+## 离线工作流 uses 引用观察
+
+- 2026-10-28 参考 [github/awesome-copilot / github-actions-hardening](https://github.com/github/awesome-copilot/blob/98b45a78d3ed316e78f005b60594d5c4a50588e3/skills/github-actions-hardening/SKILL.md) Step 5 与同版 [supply-chain.md](https://github.com/github/awesome-copilot/blob/98b45a78d3ed316e78f005b60594d5c4a50588e3/skills/github-actions-hardening/references/supply-chain.md)；固定提交 `98b45a78d3ed316e78f005b60594d5c4a50588e3`，正文 blob `61fa956e0ca6a0958ff6713b7b94ed22ecdc2e7e`，供给链引用 blob `6cb05474467ab11925d31a4d1ba9e74297ca1596`。Copyright GitHub, Inc.，原[完整 MIT](../licenses/github-actions-hardening.txt)字节保留，不编版权年份。
+- 社区贡献者 Amir / AmirhosseinHonardoust 的已合并 [PR #2002](https://github.com/github/awesome-copilot/pull/2002)引入 Skill 与方法示例，原仓结构检查不当成本 helper 的行为或安全收益测试。该目录没有原 helper/专用行为测试。
+- 原生 AST 的显式文件输入、job/steps 声明位置与字面分类、相关别名/merge 未知、限额与结构化结果均为本地新写，[使用引用](workflow-refs.md)及脚本按系列默认 Apache-2.0 保留原 MIT 通知；其它独立 MPL2/CC 等材料许可不变。
+- 只观察已声明 uses，不在 run/env/with 里做正则全文找词，不执行/改写/联网解 pin。40hex/digest 不证明存在、来源可信或安全；动态/新语法/相关结构无法解释时保未知，不套原源严重等级，不冒全量安全审查或 CI 放行。后续判断依实际权限、来源和执行上下文另审。
