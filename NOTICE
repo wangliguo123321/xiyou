@@ -26,3 +26,5 @@ Copyright IBM Corp. 2026（原 Skill 声明），来源发布者 HashiCorp；完
 沙僧视频采样帧验收方法改编自 heygen-com/hyperframes@3d1c0764a018c5c0412c6273a54c87b6ce532ef7 的 HyperFrames CLI Skill，Copyright 2026 HeyGen, Inc.（Apache-2.0）。完整许可随 skills/xiyou-shaseng/licenses/hyperframes-cli.txt 提供；仅取独立下游验证，不携其运行工具包或媒体资源。
 
 沙僧独立JSON语言回退目录方法改编自 marmelab/react-admin@0c33d9c3c27cc4bf97e11f56080c5bfe182f2f2a 的 i18n Skill 与 mergeTranslations，Copyright (c) 2016-present, Francois Zaninotto, Marmelab（MIT）。完整许可随 skills/xiyou-shaseng/licenses/react-admin-i18n.txt 提供；不携框架依赖。
+
+沙僧HTML非执行JSON数据块编码方法参考 AgriciDaniel/claude-blog@354442348815a7f0327077ad89af2c43cf4b4ab4 的正式 blog-schema Skill，Copyright (c) 2025-2026 AgriciDaniel（MIT）。完整许可见 skills/xiyou-shaseng/licenses/blog-schema.txt；仅采用编码子方法，不携博客/SEO、编辑/研究或FLOW内容。

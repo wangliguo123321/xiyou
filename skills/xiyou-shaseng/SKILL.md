@@ -1,8 +1,8 @@
 ---
 name: xiyou-shaseng
-description: "核实任务状态，清理本次临时产物，记录修改理由、验证边界和接续事项；按需只读汇总既有 GitHub PR 审查输入、观察 SARIF 报告等级、生成 PDF 逐页渲染证据、视频采样帧证据或合成独立 JSON 语言回退目录。显式调用或由 xiyou 总入口按需选用。"
+description: "核实任务状态，清理本次临时产物，记录修改理由、验证边界和接续事项；按需只读汇总既有 GitHub PR 审查输入、观察 SARIF 报告等级、生成 PDF 逐页渲染证据、视频采样帧证据、合成独立 JSON 语言回退目录及 HTML 非执行数据块。显式调用或由 xiyou 总入口按需选用。"
 metadata:
-  version: "1.8.0"
+  version: "1.9.0"
   family: "xiyou"
 ---
 
@@ -25,6 +25,8 @@ metadata:
 需要核验已有本地视频的时长和特定画面时，读 [视频采样帧证据](references/video-frame-evidence.md)，明确输入、采样时点及可选时长约定。使用实际解码时间和 PNG 对应证据，不能把请求时点当实际帧时间；生成后逐图核对内容，工具成功不代表整段视频合格。已有宿主工具能提供相同证据时优先复用。
 
 需要把默认语言与部分目标语言的独立 JSON 消息树组合成可交付文件时，读 [JSON 语言回退目录](references/locale-fallback.md)。保留目标已有字符串并补齐缺键，实际读回产物核值与来源。项目已有等价编译或合成工具时优先复用；这不是自动翻译、格式器或完整国际化开发。
+
+已有 JSON 资源需要作为普通 HTML 的非执行 `script` 数据块交付时，读 [HTML JSON 数据块](references/json-script-data.md)。使用真实 JSON 编码并转义正文所有 literal `<`，实际浏览器读取 `textContent` 后再 `JSON.parse` 核值与节点边界。生成片段不等于整个页面已验收；不处理任意 HTML 清洗、可执行 JS、SEO 或 Schema.org 语义。
 
 ## 核验、清理、记录
 
