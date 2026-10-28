@@ -70,3 +70,11 @@ Copyright (c) Microsoft Corporation.（原许可实填，无年份不补）
 作者/发布者以package声明Microsoft Corporation为据，不编个人引入者/频繁维护或官方背书。CLI0.1.22 exact core1.64.0-alpha-1790635538000由registry gitHead关联e8149b8257d32dcf8f72573ecc43e72439da7080；未安装或验证包供应链/运行兼容。
 2026-10-28 修改：新增 references/playwright-network.md 与 scripts/inspect_playwright_network.py；取已导出网络记录调查方法，自写标准库只读文件、逐行有限投影、URL值排除、身份/硬界/未知协议。原Skill没有此helper，不冒core程序移植，新增适配沿Apache2。
 只读核固定core tracing.ts/harTracer.ts的资源快照writer与pending/status默认行为，不复制其实现/原测试或资源；core的Puppeteer来源NOTICE不当作已复制代码。未继承浏览器/CLI/查看器/录制/attach/profile/安装/删除或上传。实际验收为源码原义受控数据，真实录制fixture0，非上游运行/时间分析或网络真实性证明；其余独立MPL2等单元许可不变。
+
+Trail of Bits / Eric Quintero：npm 锁定树声明盘点
+来源：https://github.com/trailofbits/skills/blob/bf23bfb21f10a2a4b0406086d690dc8cb1b3ccf3/plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md
+必要方法：同目录 scripts/collect.py 的 _npm_all_locked（94–147行）；原 scripts/test_collect.py 98–153行仅阅读、不复制或执行。
+作者据插件声明及Skill实际路径历史为 Eric Quintero / e-q；原头未载版权年，不补年份。
+许可证：CC-BY-SA-4.0，完整原根LICENSE Git blob 3b7b82d0da2db857eda1a798dbd908ea136f07b5，20131字节。
+2026-10-29 修改：独立适配 references/npm-lock-inventory.md 和 scripts/inspect_npm_lock.py，保全锁定树、声明版本/dev与registry前缀+integrity非空的区分；新增显式v2/v3支持、位置和排序、单列排除、有界只读/实际字节身份、避免输出原resolved/integrity。两文件按CC-BY-SA-4.0分发，完整许可见 skills/xiyou-wukong/licenses/npm-lock-inventory.txt（技能内为 licenses/npm-lock-inventory.txt）。
+原源attested仅字段存在与URL前缀，测试用sha512-fake；本适配不声称hash/SRI/来源真实性验证，不复制在线OSV、ACL、Scorecard、鉴权或风险报告/放行、安装构建。原源无本适配的两文件diff方法或接口；其它独立组件许可不变。

@@ -44,3 +44,10 @@ CI 解码错误隔离采用上述 `python-error-handling` 的边界验证、具�
 - CLI0.1.22声明 exact core1.64.0-alpha-1790635538000，registry gitHead关联 `microsoft/playwright@e8149b8257d32dcf8f72573ecc43e72439da7080`；只读必要 `packages/playwright-core/src/server/trace/recorder/tracing.ts` 与 `server/har/harTracer.ts` 行为，确认资源快照JSONL、pending flush和status初始-1。版本关联不是运行或供应链证明，context version10不当单文件版本头。
 - 2026-10-28 新写 [使用引用](playwright-network.md)与 Python 标准库 helper，沿原Apache2保归属，取离线声明调查而非原捕获链；原源没有此分析脚本。输入身份、逐行投影、URL有限显示、未知/硬界与结构化输出为本地适配。
 - 未复制core实现/原测试/资源、不引Node或浏览器；不采用时间/性能、回放、profile、旧trace删除、安装或上传。真实fixture未取得，实际适配试验仅受控原义数据；不能冒真实录制、上游测试或完整网络/根因/安全保证。其它独立MPL2等单元不变。
+
+## 离线 npm 锁定树声明盘点
+
+- 来源 [Trail of Bits / supply-chain-risk-auditor](https://github.com/trailofbits/skills/blob/bf23bfb21f10a2a4b0406086d690dc8cb1b3ccf3/plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md)，固定提交 `bf23bfb21f10a2a4b0406086d690dc8cb1b3ccf3`。必要 [collect.py](https://github.com/trailofbits/skills/blob/bf23bfb21f10a2a4b0406086d690dc8cb1b3ccf3/plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/scripts/collect.py) 的 `_npm_all_locked` 与 [test_collect.py](https://github.com/trailofbits/skills/blob/bf23bfb21f10a2a4b0406086d690dc8cb1b3ccf3/plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/scripts/test_collect.py) 98–153 行闭合了嵌套/dev/link、非公开来源、缺完整性和旧格式未读的定义；原测试未执行。
+- 插件声明与实际Skill历史作者 Eric Quintero / e-q；历史提交 `e6066e7db1fd57cb35f9a534781ceec595327feb`，不伪造版权年份。根完整 [CC-BY-SA-4.0](../licenses/npm-lock-inventory.txt) 原字节保留，未见适用更近许可或NOTICE。
+- 2026-10-29 改编为[使用引用](npm-lock-inventory.md)与 Python 标准库脚本；这两个独立文件明确按 CC-BY-SA-4.0 分发。保留全锁定树、声明版本/dev、字面registry/integrity与未知区分。原函数不保安装位置、不排序、跳过link/缺版本；位置、排除清单、v2/v3支持门、显式文件/资源/JSON协议及避免输出原URL是本地适配。
+- 原函数的 attested 只看 URL 字符串前缀和 integrity 非空，原测试有假哈希；本法器明确命名为声明，不验证SRI或真实来源。未引原collector、在线OSV/ACL/Scorecard/GitHub采集、鉴权、风险评判、许可证审计、安装构建或渲染链，也不把原法冒作两文件diff算法。其它MPL2/Apache/MIT等独立组件保持原许可。

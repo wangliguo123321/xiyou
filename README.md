@@ -89,6 +89,8 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 
 已有解包的 Playwright `.network` 需要调查时，悟空可做[离线网络记录观察](skills/xiyou-wukong/references/playwright-network.md)，保留声明行、URL有限投影与未知状态；不运行浏览器或做耗时、根因判断。
 
+已有明确的 npm v2/v3 锁文件需要核对时，悟空可做[离线锁定树声明盘点](skills/xiyou-wukong/references/npm-lock-inventory.md)，保留传递包的安装位置、精确版本、开发依赖与排除项。公开仓库 URL 前缀及完整性字段只作声明观察，不代表包已验证或项目安全。
+
 ### 哪吒·速断：圈定问题，尽快答完
 
 风火轮负责快速抵达入口，乾坤圈负责限制调查范围。
@@ -212,7 +214,7 @@ xiyou 从已有的优秀方法出发，保留有用的流程，再针对角色�
 | 技能与来源记录 | 主要基础 |
 |---|---|
 | [唐僧](skills/xiyou-tangseng/references/lineage.md) | Anthropic 解释式教学、Matt Pocock `teach`；Cathryn Lavery `diagram-design` 的静态流程图制作方法 |
-| [悟空](skills/xiyou-wukong/references/lineage.md) | Superpowers `brainstorming`、`systematic-debugging`；HashiCorp Terraform 状态地址盘点（独立 MPL-2.0 法器）；GitHub 社区 workflow 引用观察（保原 MIT 通知）；Microsoft Playwright 网络声明观察 |
+| [悟空](skills/xiyou-wukong/references/lineage.md) | Superpowers `brainstorming`、`systematic-debugging`；HashiCorp Terraform 状态地址盘点（独立 MPL-2.0 法器）；GitHub 社区 workflow 引用观察（保原 MIT 通知）；Microsoft Playwright 网络声明观察；Trail of Bits npm 锁定树声明盘点（独立 CC-BY-SA-4.0 法器） |
 | [哪吒](skills/xiyou-nezha/references/lineage.md) | ECC `iterative-retrieval`、`code-explorer`；`i-have-adhd` 的行动优先表达 |
 | [八戒](skills/xiyou-bajie/references/lineage.md) | Anthropic 代码简化、ECC 复用优先、Matt Pocock 双轴审查、Superpowers 评审建议核验、gstack 范围保持与缩减 |
 | [沙僧](skills/xiyou-shaseng/references/lineage.md) | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证；OpenAI 历史公开 PDF 逐页渲染验收；HeyGen HyperFrames 的成品视频抽帧验收；Marmelab React-admin 的语言目录回退合成；AgriciDaniel claude-blog 的 JSON/HTML 数据块编码；Trail of Bits SARIF 等级观察（独立 CC-BY-SA-4.0 法器） |
@@ -245,3 +247,5 @@ GitHub 中的改进经合并后成为共享版本。已经安装到电脑里的�
 独立的 [SARIF 等级观察引用](skills/xiyou-shaseng/references/sarif-levels.md) 与 [对应实现](skills/xiyou-shaseng/scripts/inspect_sarif_levels.py) 是 Trail of Bits 方法的改编，按 [CC-BY-SA-4.0](skills/xiyou-shaseng/licenses/sarif-parsing.txt) 分发；此为上述默认声明的明确文件例外。归属与修改说明随法器提供，其余独立组件的许可不变。
 
 独立的 [Terraform 状态库存引用](skills/xiyou-wukong/references/terraform-state-inventory.md)与[对应实现](skills/xiyou-wukong/scripts/inspect_terraform_state.py)按 [MPL-2.0](skills/xiyou-wukong/licenses/terraform-refactor.txt)分发，来源 HashiCorp / Copyright IBM Corp. 2026；这是默认 Apache 声明的明确文件例外，其余独立组件许可不变。
+
+独立的 [npm 锁定树盘点引用](skills/xiyou-wukong/references/npm-lock-inventory.md)与[对应实现](skills/xiyou-wukong/scripts/inspect_npm_lock.py)改编自 Trail of Bits / Eric Quintero 的 supply-chain-risk-auditor，按 [CC-BY-SA-4.0](skills/xiyou-wukong/licenses/npm-lock-inventory.txt)分发，归属和修改说明随附；这是默认 Apache 声明的明确文件例外，其余组件许可不变。
