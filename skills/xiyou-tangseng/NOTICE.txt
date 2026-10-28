@@ -10,3 +10,9 @@ https://github.com/mattpocock/skills/blob/3cca18b368ae95cdbdebbff572ccafa6625510
 anthropics/claude-plugins-official
 https://github.com/anthropics/claude-plugins-official/blob/da823e86c8feef13b73b6712af11eadd38c992f6/plugins/explanatory-output-style/hooks-handlers/session-start.sh
 许可证：licenses/explanatory.txt
+
+cathrynlavery/diagram-design
+Copyright (c) 2025 Cathryn Lavery
+https://github.com/cathrynlavery/diagram-design/blob/0cf73c3fcc56667ad91a9a04c439ac6ccfabc9d1/skills/diagram-design/SKILL.md
+许可证：licenses/diagram-design.txt
+2026-10-28：改编第一方流程图制作方法，收敛到离线原生SVG；不分发第三方图标、品牌logo或字体，不采用上游HTML导出器。标准库制作脚本为xiyou新增宿主实现。

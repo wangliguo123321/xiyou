@@ -20,3 +20,5 @@ skills/xiyou-wukong/references/terraform-state-inventory.md
 Copyright IBM Corp. 2026（原 Skill 声明），来源发布者 HashiCorp；完整归属与修改说明见该技能 NOTICE.txt / lineage.md。
 固定原源 hashicorp/agent-skills@f706481af9b8fedb66de909f6243ad29601afa0c；完整 MPL-2.0 位于 skills/xiyou-wukong/licenses/terraform-refactor.txt。
 上述两文件按 MPL-2.0 提供，作为独立单元聚合，不适用新增内容的默认 Apache-2.0；其余独立文件许可不变，不暗示原作者背书。
+
+唐僧流程图制作方法改编自 cathrynlavery/diagram-design@0cf73c3fcc56667ad91a9a04c439ac6ccfabc9d1，Copyright (c) 2025 Cathryn Lavery（MIT）。完整许可位于 skills/xiyou-tangseng/licenses/diagram-design.txt；仅吸收第一方方法，不含其第三方图标、品牌logo与字体。
