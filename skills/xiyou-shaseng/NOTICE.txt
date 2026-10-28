@@ -71,3 +71,9 @@ https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/s
 来源归属：OpenAI 公开例库；引入/同步维护 Vaibhav Srivastav（vb-openai），引入提交并署 Dominik Kundel。不推断个人拥有全部著作权，也不编原源未给出的版权年份。
 2026-10-28 修改：新增 scripts/render_pdf_pages.py 与 references/pdf-render-evidence.md；吸收 Poppler 逐页渲染后实际看图、文字抽取不能证明版面的具体方法。本地新写输入内容快照、明确选页、全新输出目录和逐页身份清单，原源本身没有该脚本或协议。
 不复制当前专有 PDF 插件，不继承依赖自动安装或源仓输出目录约定；不称当前官方维护、上游运行效果或 OpenAI 背书。固定目录无适用 NOTICE，完整许可中的版权模板不作为真实作者声明。
+
+HeyGen / HyperFrames CLI Skill（仅独立成品视频验收步骤）
+Copyright 2026 HeyGen, Inc.
+https://github.com/heygen-com/hyperframes/blob/3d1c0764a018c5c0412c6273a54c87b6ce532ef7/skills/hyperframes-cli/SKILL.md
+许可证：licenses/hyperframes-cli.txt（根完整 Apache-2.0）
+2026-10-28：新增 references/video-frame-evidence.md 与本地新写 scripts/inspect_video_frames.py，吸收明确时长对照与查看解码帧的方法，并新增内容快照/实际PTS/PNG身份及错误边界。原源程序未执行，不携工具包/媒体/字体，不含云/遥测/制作框架，不暗示作者背书。
