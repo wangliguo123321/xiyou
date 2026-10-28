@@ -77,3 +77,10 @@ Copyright 2026 HeyGen, Inc.
 https://github.com/heygen-com/hyperframes/blob/3d1c0764a018c5c0412c6273a54c87b6ce532ef7/skills/hyperframes-cli/SKILL.md
 许可证：licenses/hyperframes-cli.txt（根完整 Apache-2.0）
 2026-10-28：新增 references/video-frame-evidence.md 与本地新写 scripts/inspect_video_frames.py，吸收明确时长对照与查看解码帧的方法，并新增内容快照/实际PTS/PNG身份及错误边界。原源程序未执行，不携工具包/媒体/字体，不含云/遥测/制作框架，不暗示作者背书。
+
+marmelab/react-admin（独立语言回退目录合成方法）
+Copyright (c) 2016-present, Francois Zaninotto, Marmelab
+https://github.com/marmelab/react-admin/blob/0c33d9c3c27cc4bf97e11f56080c5bfe182f2f2a/.agents/skills/i18n/SKILL.md
+https://github.com/marmelab/react-admin/blob/0c33d9c3c27cc4bf97e11f56080c5bfe182f2f2a/packages/ra-core/src/i18n/TranslationUtils.ts
+许可证：licenses/react-admin-i18n.txt（根完整MIT原字节）
+2026-10-28：新增 references/locale-fallback.md 与本地新写 scripts/merge_locale_catalogs.py，吸收英文底层/后层覆盖/递归补缺/保留额外消息的方法；收窄为兼容对象和字符串的独立JSON合成，新增有界输入、字面保真、内容身份与独占输出。未运行原程序；不携React/Lodash/Polyglot，不声称原框架或上游作者背书，完整边界见lineage。
