@@ -22,3 +22,5 @@ Copyright IBM Corp. 2026（原 Skill 声明），来源发布者 HashiCorp；完
 上述两文件按 MPL-2.0 提供，作为独立单元聚合，不适用新增内容的默认 Apache-2.0；其余独立文件许可不变，不暗示原作者背书。
 
 唐僧流程图制作方法改编自 cathrynlavery/diagram-design@0cf73c3fcc56667ad91a9a04c439ac6ccfabc9d1，Copyright (c) 2025 Cathryn Lavery（MIT）。完整许可位于 skills/xiyou-tangseng/licenses/diagram-design.txt；仅吸收第一方方法，不含其第三方图标、品牌logo与字体。
+
+沙僧视频采样帧验收方法改编自 heygen-com/hyperframes@3d1c0764a018c5c0412c6273a54c87b6ce532ef7 的 HyperFrames CLI Skill，Copyright 2026 HeyGen, Inc.（Apache-2.0）。完整许可随 skills/xiyou-shaseng/licenses/hyperframes-cli.txt 提供；仅取独立下游验证，不携其运行工具包或媒体资源。

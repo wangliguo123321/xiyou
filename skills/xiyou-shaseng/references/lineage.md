@@ -37,3 +37,9 @@ PR 采集以沙僧的输入整理及交接职责承接。2026-10-24 依据固定
 - 2026-10-28 吸收“PDF 用 Poppler 逐页转 PNG 后实际看图；文本抽取不能替代版式核验”。原目录仅指令/界面元数据及图片，没有脚本、测试或可核实例；本地 [使用引用](pdf-render-evidence.md)及脚本是窄适配，不宣称移植了上游程序或证明模型能力提升。
 - 原例库已明确弃用并迁往 `openai/plugins`；本法器固定旧版可分发方法，不称当前官方推荐。当前专有 PDF 条目及本机插件内容未被复制。宿主已有完整 PDF 工具时复用；本法器只补可分发的输入内容身份、范围与逐页产物对账接口。
 - 保留真实视觉检查，不继承生成/编辑 PDF、OCR、依赖安装和源仓输出路径约定。快照、配额、选页/PNG 身份、拒覆盖和错误协议为本地适配，不是视觉合格或恶意 PDF 安全结论。
+
+## 视频采样帧验收窄方法
+
+2026-10-28：参考 HeyGen 的 [HyperFrames CLI Skill](https://github.com/heygen-com/hyperframes/blob/3d1c0764a018c5c0412c6273a54c87b6ce532ef7/skills/hyperframes-cli/SKILL.md) 及同版 `references/preview-render.md`、`references/lint-validate-inspect.md` 的独立最终验收步骤：核输出、用 ffprobe 对照时长、检查解码帧，按场景采样且实际看像素。Copyright 2026 HeyGen, Inc.，完整 [Apache-2.0](../licenses/hyperframes-cli.txt) 随附。
+
+[视频采样帧证据](video-frame-evidence.md)与本地新写 `inspect_video_frames.py` 将该下游方法收敛为本地有限 MP4/MOV 的显式时点采样、输入内容快照及请求点/实际解码 PTS/PNG 身份绑定。不是上游脚本或完整渲染器移植，不执行原源程序；不采用原 CLI、GSAP、时间线编辑、云制作、自动安装、预览服务器或遥测反馈。帧/时长就绪仍不能代替内容验收或证明整段无缺陷。
