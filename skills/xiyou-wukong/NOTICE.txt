@@ -61,3 +61,12 @@ Copyright GitHub, Inc.（原 LICENSE 无年份，不补年份）
 该 Skill 是 GitHub 组织中的社区贡献，引入者 Amir / AmirhosseinHonardoust，review ownership 为 awesome-copilot 内容维护团队；不当作 GitHub 产品强制政策、全体代码单人署名或官方背书。
 2026-10-28 修改：取 Step 5 逐 uses 盘点及 SHA/命名引用区分方法，本地新写 references/workflow-refs.md 与 scripts/inspect_workflow_refs.rb 的原生 YAML AST、范围位置/有限分类/未知与资源协议。新增适配沿系列默认 Apache-2.0 并保原 MIT 通知；原源没有此 helper，不移植原程序。
 未采用原源完整加固流程、固定严重等级、自动改 pin/Dependabot/权限、远端解析、工作流运行或安全放行。40hex/digest 只字面形态，未知不猜；本法器与已有 MPL2 Terraform 独立单元分开，后者许可不变。
+
+Microsoft Playwright CLI：离线.network声明观察
+Copyright (c) Microsoft Corporation.（原许可实填，无年份不补）
+固定Skill：https://github.com/microsoft/playwright-cli/blob/b1a5903c5b633b8c9f843ad7b629c2a78437040c/skills/playwright-cli/SKILL.md
+必要引用：https://github.com/microsoft/playwright-cli/blob/b1a5903c5b633b8c9f843ad7b629c2a78437040c/skills/playwright-cli/references/tracing.md
+许可证：licenses/playwright-cli.txt（11552B完整原Apache-2.0，SHA256 9a7110fc2d2f964038e5dc49128f908f29f47a574c961cba16085914e879cbda）；CLI相关树仅根许可，无适用子许可/NOTICE。
+作者/发布者以package声明Microsoft Corporation为据，不编个人引入者/频繁维护或官方背书。CLI0.1.22 exact core1.64.0-alpha-1790635538000由registry gitHead关联e8149b8257d32dcf8f72573ecc43e72439da7080；未安装或验证包供应链/运行兼容。
+2026-10-28 修改：新增 references/playwright-network.md 与 scripts/inspect_playwright_network.py；取已导出网络记录调查方法，自写标准库只读文件、逐行有限投影、URL值排除、身份/硬界/未知协议。原Skill没有此helper，不冒core程序移植，新增适配沿Apache2。
+只读核固定core tracing.ts/harTracer.ts的资源快照writer与pending/status默认行为，不复制其实现/原测试或资源；core的Puppeteer来源NOTICE不当作已复制代码。未继承浏览器/CLI/查看器/录制/attach/profile/安装/删除或上传。实际验收为源码原义受控数据，真实录制fixture0，非上游运行/时间分析或网络真实性证明；其余独立MPL2等单元许可不变。

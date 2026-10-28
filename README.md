@@ -85,6 +85,8 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 
 已有 GitHub Actions 工作流需要调查依赖声明时，悟空可做[离线 uses 引用观察](skills/xiyou-wukong/references/workflow-refs.md)，返回 job/step 位置与字面形式；不执行工作流，也不把完整 SHA 形态当安全结论。
 
+已有解包的 Playwright `.network` 需要调查时，悟空可做[离线网络记录观察](skills/xiyou-wukong/references/playwright-network.md)，保留声明行、URL有限投影与未知状态；不运行浏览器或做耗时、根因判断。
+
 ### 哪吒·速断：圈定问题，尽快答完
 
 风火轮负责快速抵达入口，乾坤圈负责限制调查范围。
@@ -202,7 +204,7 @@ xiyou 从已有的优秀方法出发，保留有用的流程，再针对角色�
 | 技能与来源记录 | 主要基础 |
 |---|---|
 | [唐僧](skills/xiyou-tangseng/references/lineage.md) | Anthropic 解释式教学、Matt Pocock `teach` |
-| [悟空](skills/xiyou-wukong/references/lineage.md) | Superpowers `brainstorming`、`systematic-debugging`；HashiCorp Terraform 状态地址盘点（独立 MPL-2.0 法器）；GitHub 社区 workflow 引用观察（保原 MIT 通知） |
+| [悟空](skills/xiyou-wukong/references/lineage.md) | Superpowers `brainstorming`、`systematic-debugging`；HashiCorp Terraform 状态地址盘点（独立 MPL-2.0 法器）；GitHub 社区 workflow 引用观察（保原 MIT 通知）；Microsoft Playwright 网络声明观察 |
 | [哪吒](skills/xiyou-nezha/references/lineage.md) | ECC `iterative-retrieval`、`code-explorer`；`i-have-adhd` 的行动优先表达 |
 | [八戒](skills/xiyou-bajie/references/lineage.md) | Anthropic 代码简化、ECC 复用优先、Matt Pocock 双轴审查、Superpowers 评审建议核验、gstack 范围保持与缩减 |
 | [沙僧](skills/xiyou-shaseng/references/lineage.md) | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证；OpenAI 历史公开 PDF 逐页渲染验收；Trail of Bits SARIF 等级观察（独立 CC-BY-SA-4.0 法器） |
