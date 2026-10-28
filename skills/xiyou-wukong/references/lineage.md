@@ -37,3 +37,10 @@ CI 解码错误隔离采用上述 `python-error-handling` 的边界验证、具�
 - 社区贡献者 Amir / AmirhosseinHonardoust 的已合并 [PR #2002](https://github.com/github/awesome-copilot/pull/2002)引入 Skill 与方法示例，原仓结构检查不当成本 helper 的行为或安全收益测试。该目录没有原 helper/专用行为测试。
 - 原生 AST 的显式文件输入、job/steps 声明位置与字面分类、相关别名/merge 未知、限额与结构化结果均为本地新写，[使用引用](workflow-refs.md)及脚本按系列默认 Apache-2.0 保留原 MIT 通知；其它独立 MPL2/CC 等材料许可不变。
 - 只观察已声明 uses，不在 run/env/with 里做正则全文找词，不执行/改写/联网解 pin。40hex/digest 不证明存在、来源可信或安全；动态/新语法/相关结构无法解释时保未知，不套原源严重等级，不冒全量安全审查或 CI 放行。后续判断依实际权限、来源和执行上下文另审。
+
+## 离线 Playwright 网络记录观察
+
+- 固定源 [microsoft/playwright-cli / playwright-cli](https://github.com/microsoft/playwright-cli/blob/b1a5903c5b633b8c9f843ad7b629c2a78437040c/skills/playwright-cli/SKILL.md)，完整提交 `b1a5903c5b633b8c9f843ad7b629c2a78437040c`，必要 [tracing.md](https://github.com/microsoft/playwright-cli/blob/b1a5903c5b633b8c9f843ad7b629c2a78437040c/skills/playwright-cli/references/tracing.md)。Copyright (c) Microsoft Corporation.，完整原 [Apache-2.0](../licenses/playwright-cli.txt)保字节与通知，不补年份或唯一作者。
+- CLI0.1.22声明 exact core1.64.0-alpha-1790635538000，registry gitHead关联 `microsoft/playwright@e8149b8257d32dcf8f72573ecc43e72439da7080`；只读必要 `packages/playwright-core/src/server/trace/recorder/tracing.ts` 与 `server/har/harTracer.ts` 行为，确认资源快照JSONL、pending flush和status初始-1。版本关联不是运行或供应链证明，context version10不当单文件版本头。
+- 2026-10-28 新写 [使用引用](playwright-network.md)与 Python 标准库 helper，沿原Apache2保归属，取离线声明调查而非原捕获链；原源没有此分析脚本。输入身份、逐行投影、URL有限显示、未知/硬界与结构化输出为本地适配。
+- 未复制core实现/原测试/资源、不引Node或浏览器；不采用时间/性能、回放、profile、旧trace删除、安装或上传。真实fixture未取得，实际适配试验仅受控原义数据；不能冒真实录制、上游测试或完整网络/根因/安全保证。其它独立MPL2等单元不变。

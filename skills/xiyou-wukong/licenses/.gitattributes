@@ -1,0 +1,1 @@
+playwright-cli.txt -text whitespace=trailing-space,space-before-tab,cr-at-eol
