@@ -43,3 +43,9 @@ PR 采集以沙僧的输入整理及交接职责承接。2026-10-24 依据固定
 2026-10-28：参考 HeyGen 的 [HyperFrames CLI Skill](https://github.com/heygen-com/hyperframes/blob/3d1c0764a018c5c0412c6273a54c87b6ce532ef7/skills/hyperframes-cli/SKILL.md) 及同版 `references/preview-render.md`、`references/lint-validate-inspect.md` 的独立最终验收步骤：核输出、用 ffprobe 对照时长、检查解码帧，按场景采样且实际看像素。Copyright 2026 HeyGen, Inc.，完整 [Apache-2.0](../licenses/hyperframes-cli.txt) 随附。
 
 [视频采样帧证据](video-frame-evidence.md)与本地新写 `inspect_video_frames.py` 将该下游方法收敛为本地有限 MP4/MOV 的显式时点采样、输入内容快照及请求点/实际解码 PTS/PNG 身份绑定。不是上游脚本或完整渲染器移植，不执行原源程序；不采用原 CLI、GSAP、时间线编辑、云制作、自动安装、预览服务器或遥测反馈。帧/时长就绪仍不能代替内容验收或证明整段无缺陷。
+
+## 独立 JSON 语言回退目录
+
+2026-10-28：参考 [marmelab/react-admin 的 i18n Skill](https://github.com/marmelab/react-admin/blob/0c33d9c3c27cc4bf97e11f56080c5bfe182f2f2a/.agents/skills/i18n/SKILL.md)，及同版 [TranslationUtils.ts](https://github.com/marmelab/react-admin/blob/0c33d9c3c27cc4bf97e11f56080c5bfe182f2f2a/packages/ra-core/src/i18n/TranslationUtils.ts) 的 `mergeTranslations` 与 [真实测试](https://github.com/marmelab/react-admin/blob/0c33d9c3c27cc4bf97e11f56080c5bfe182f2f2a/packages/ra-core/src/i18n/TranslationUtils.spec.ts)，采用默认语言作底层、后层递归覆盖且保留缺键和额外消息的方法。Copyright (c) 2016-present, Francois Zaninotto, Marmelab，完整 [MIT](../licenses/react-admin-i18n.txt) 随附。
+
+[回退目录引用](locale-fallback.md)及本地新写 `merge_locale_catalogs.py` 收窄为两份兼容对象/字符串 JSON 消息树。输出为可消费的独立 JSON；输入类型/形状与资源限制、内容身份和独占发布是宿主约束，不声称原 Lodash 会拒绝形状冲突或提供此 Python 接口。键与字符串按 JSON 数据字面处理，不采用 JavaScript 原型/属性访问，不模拟 TS `satisfies`、语言选择、插值、Polyglot 复数或完整 Lodash 语义。未执行原源程序，不携 React/Polyglot/Lodash 依赖。
