@@ -16,3 +16,11 @@ Copyright (c) 2025 Cathryn Lavery
 https://github.com/cathrynlavery/diagram-design/blob/0cf73c3fcc56667ad91a9a04c439ac6ccfabc9d1/skills/diagram-design/SKILL.md
 许可证：licenses/diagram-design.txt
 2026-10-28：改编第一方流程图制作方法，收敛到离线原生SVG；不分发第三方图标、品牌logo或字体，不采用上游HTML导出器。标准库制作脚本为xiyou新增宿主实现。
+
+教学 Notebook 骨架：历史上游与中文适配
+来源发布者：OpenAI；最后Skill路径提交作者Vaibhav Srivastav，不冒全文件唯一原创作者。
+https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/jupyter-notebook/SKILL.md
+必要方法：同提交 scripts/new_notebook.py、assets/tutorial-template.ipynb、references/tutorial-patterns.md 与 notebook-structure.md。
+完整原Apache-2.0见 skills/xiyou-tangseng/licenses/jupyter-notebook.txt（技能内licenses/jupyter-notebook.txt），原Gitblob13e25df86ce06eb6488e6a6bc5c5847f5dedc352；完整源树未见该目录更近NOTICE。许可附录的占位版权字样原样保留，不当实际版权署名。
+2026-10-29 修改：中文改编七单元格教学骨架与模板优先方法，新增assets/tutorial-template.json、scripts/create_tutorial_notebook.py及references/tutorial-notebook.md；补唯一合法cell ID，显式新路径、拒覆盖和JSON文件身份。新增适配按项目Apache-2.0。
+旧openai/skills已弃用，仅引用明确开放的历史方法；当前plugins同类路径许可未核，未读其正文、未采用，不代表官方维护或认可。未执行原程序/示例，不采experiment、旧笔记编辑/清理、默认写仓库、自动mkdir、--force或固定实际Python版本。输出只是待填骨架，不作完整schema引擎/Jupyter图形/内核运行或教学效果证明。其它组件许可不变。
