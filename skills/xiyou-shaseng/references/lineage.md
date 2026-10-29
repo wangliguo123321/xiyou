@@ -57,3 +57,11 @@ PR 采集以沙僧的输入整理及交接职责承接。2026-10-24 依据固定
 [数据块引用](json-script-data.md)与本地新写 `embed_json_data.py` 选择正式 Skill 要求的全部 literal `<` 转义；原函数只转义 `</`，并非同等完整保证。输入改为已有 JSON，输出固定为普通 `application/json` 数据块，ID、类型/数值、资源、内容身份及独占发布为宿主约束，不声称原源已提供此工具或全浏览器/全页面安全。未运行上游程序，不采用博客制作、SEO、富结果或 Schema.org 验证。
 
 原根 [NOTICE](https://github.com/AgriciDaniel/claude-blog/blob/354442348815a7f0327077ad89af2c43cf4b4ab4/NOTICE) 已完整核读，列出的 impeccable 编辑启发式、last30days 研究及 FLOW 提示内容未在本窄方法中采用。本次不取 Tessl 链接到的 `brain/.raw/sources/...` 快照作为原源；其父与更近许可须分层判断，不能仅据父声明推断无许可。
+
+## 载荷字段一致性核对
+
+- 实际原源在 [GitLab / aer1-verify](https://gitlab.com/rambozambodotdev/zambo/-/blob/7d5947d647919705fff3d8223e30594f5918a660/skills/aer1-verify/SKILL.md)，固定commit `7d5947d647919705fff3d8223e30594f5918a660`、Skill blob `09ebf80a4aee36a70c414fe5f865418985c00803`。仅选 [conformance.py](https://gitlab.com/rambozambodotdev/zambo/-/blob/7d5947d647919705fff3d8223e30594f5918a660/aer-1/conformance.py) 442–475行的严格base64重编码、UTF8及原字节SHA256子法；没有搬整个验证器。
+- Copyright (c) 2026 Brennan Zambo，Skill元数据zambo.dev、路径提交作者rambo分别记录，不编唯一作者。[完整MIT](../licenses/aer1-payload.txt)1070B保原字节。ClawHub receipts发行、GitHub公开指针、此GitLab实现分开核验；同作者/同MIT或下载量不证明发行内容同一。
+- 2026-10-29 独立适配[使用引用](payload-commitment.md)与标准库JSON消费者；显式文件、支持界限/资源、输入身份、分项未测null、不回显载荷与错误协议是本地实现。UTF8无效时不继续摘要比较，按所选源检查门保未验；非规范base64即使同字节/同hash仍不可当匹配。
+- 原4固定向量是来源项目的编码/数学关系资料，不当未见留出或原程序执行证明。本轮不运行原conformance源码，不用124/127等自述或Internet-Draft身份认证效果；草案不是已批准RFC，固定子法也不声称当前完整规范合规。
+- 原载荷只按解码后的精确UTF8字节处理，不做JSON/JCS重序列化、Unicode或换行归一化。本法器只读已有两字段，不生成回执/runner，不接服务/新凭据，不查其它schema、时间、id、provenance、链、Merkle、anchor、签名或信任，不能推执行发生/输出正确/权限成立。

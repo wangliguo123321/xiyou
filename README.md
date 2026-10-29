@@ -145,6 +145,8 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 
 已有 JSON 需要交付为 HTML 中的非执行数据块时，可让沙僧[生成 JSON script 片段](skills/xiyou-shaseng/references/json-script-data.md)：使用标准 JSON 编码，转义数据中的所有 `<`，避免数据提前结束节点；交付前在真实浏览器读取并解析，核对原值与宿主节点。
 
+已有 JSON 对象的 `canonical_bytes` / `output_hash` 需要核对时，沙僧可做[载荷字段一致性检查](skills/xiyou-shaseng/references/payload-commitment.md)：核规范 base64、UTF-8 与原字节摘要。它只返回部分字段观察，不执行或生成回执，也不证明命令发生或来源真实。
+
 ### 太乙·炼技：把社区经验炼成可用的法器
 
 借太乙真人传授能力、重塑既有结构的意象，负责持续吸收开源社区的经验。
@@ -219,7 +221,7 @@ xiyou 从已有的优秀方法出发，保留有用的流程，再针对角色�
 | [悟空](skills/xiyou-wukong/references/lineage.md) | Superpowers `brainstorming`、`systematic-debugging`；HashiCorp Terraform 状态地址盘点（独立 MPL-2.0 法器）；GitHub 社区 workflow 引用观察（保原 MIT 通知）；Microsoft Playwright 网络声明观察；Trail of Bits npm 锁定树声明盘点（独立 CC-BY-SA-4.0 法器） |
 | [哪吒](skills/xiyou-nezha/references/lineage.md) | ECC `iterative-retrieval`、`code-explorer`；`i-have-adhd` 的行动优先表达 |
 | [八戒](skills/xiyou-bajie/references/lineage.md) | Anthropic 代码简化、ECC 复用优先、Matt Pocock 双轴审查、Superpowers 评审建议核验、gstack 范围保持与缩减 |
-| [沙僧](skills/xiyou-shaseng/references/lineage.md) | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证；OpenAI 历史公开 PDF 逐页渲染验收；HeyGen HyperFrames 的成品视频抽帧验收；Marmelab React-admin 的语言目录回退合成；AgriciDaniel claude-blog 的 JSON/HTML 数据块编码；Trail of Bits SARIF 等级观察（独立 CC-BY-SA-4.0 法器） |
+| [沙僧](skills/xiyou-shaseng/references/lineage.md) | Matt Pocock 交接与文档组织、Superpowers 完成验证与分支状态检查、ECC 文档同步、清理分级与分层验证；OpenAI 历史公开 PDF 逐页渲染验收；HeyGen HyperFrames 的成品视频抽帧验收；Marmelab React-admin 的语言目录回退合成；AgriciDaniel claude-blog 的 JSON/HTML 数据块编码；Trail of Bits SARIF 等级观察（独立 CC-BY-SA-4.0 法器）；Zambo AER-1 的载荷字段核对子法 |
 | [太乙](skills/xiyou-taiyi/references/lineage.md) | Vercel `find-skills`、Anthropic `skill-creator`、ECC 技能盘点、Darwin 匿名成对比较与有界优化；YottaMeta 的 npm 打包名单检查子法 |
 | [修炼（法器）](skills/xiyou-xiulian/references/lineage.md) | talki `prompt-optimizer` 的保真改写、Max Simchowitz `prompt-improving` 的上下文澄清（均为 MIT 许可） |
 | [照影镜（法器）](skills/zhaoyingjing/references/lineage.md) | Alibaba OpenCodeReview 的差异审查、全量扫描、委托模式、规则、会话与集成能力（Apache-2.0） |

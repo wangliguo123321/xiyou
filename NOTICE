@@ -43,3 +43,11 @@ npm 打包计划清单核对：上游来源与独立适配
 Copyright (c) 2026 YottaMeta。完整原MIT见 skills/xiyou-taiyi/licenses/npm-pack-check.txt（技能内licenses/npm-pack-check.txt），完整原品牌NOTICE见对应npm-pack-check-NOTICE.txt；原名仅用于来源署名，本法器与YottaMeta官方无关联，不使用原品牌作为派生名称、不暗示认可/维护。
 2026-10-29 修改：新增 references/npm-pack-check.md 与 scripts/inspect_npm_pack.py，只吸收npm返回路径清单中的必需件/缓存名核对，独立改为显式单包JSON输入和required参数、保全部路径、完整段缓存模式、严格结构/限额/失败/身份协议。新增适配按项目Apache-2.0，保留上游MIT归属与NOTICE；不声称兼容上游CLI或继承其发布门。
 未复制或运行原执行器/测试，不采原npm调用、目录近似回退、多包union、版本正则框架、安装/hook/force/publish。本轮未运行原测试；所读固定publish workflow未见显式测试步骤，不把源测试或CI当本法器通过证据。作者NOTICE中的自研/实战为作者声明，未独立认证原完整工具或效果。其它组件许可不变。
+
+载荷字段一致性核对：上游来源与独立适配
+Copyright (c) 2026 Brennan Zambo；实际Skill元数据署名zambo.dev，路径提交作者rambo，不冒全文件唯一作者。
+原源GitLab：https://gitlab.com/rambozambodotdev/zambo/-/blob/7d5947d647919705fff3d8223e30594f5918a660/skills/aer1-verify/SKILL.md
+必要方法：同提交 aer-1/conformance.py 442–475行（严格base64/重编码同拼写/严格UTF8/原字节SHA256），不是整个conformance框架。
+完整原MIT1070B见 skills/xiyou-shaseng/licenses/aer1-payload.txt（技能内licenses/aer1-payload.txt），Gitblob33743a18e21e7b540b4b52df3ebfcb66262e4bd4。目标父目录未见更近许可/NOTICE。GitHub公开指针同许可字节，不当GitHub/ClawHub/GitLab代码同一身份。
+2026-10-29 修改：新增 references/payload-commitment.md 与 scripts/inspect_payload_commitment.py，独立改为显式本地JSON两字符串字段、有界读取/字节身份、分项bool/null与0/1/2结果，不投影载荷/其它metadata。新适配按项目Apache-2.0并保原MIT归属，不声称兼容上游完整CLI或标准认证。
+未执行原程序、不采远端verify、MCP接入、回执/runner生成、签名或core/time/id/provenance/chain/Merkle/anchor全框架。即使字段匹配也不输出完整CONFORMANT、执行/正确性/授权或来源真实性证明；原草案身份及自评向量/检查数不是效果依据。其它独立组件许可不变。
