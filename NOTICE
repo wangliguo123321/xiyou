@@ -51,3 +51,11 @@ Copyright (c) 2026 Brennan Zambo；实际Skill元数据署名zambo.dev，路径�
 完整原MIT1070B见 skills/xiyou-shaseng/licenses/aer1-payload.txt（技能内licenses/aer1-payload.txt），Gitblob33743a18e21e7b540b4b52df3ebfcb66262e4bd4。目标父目录未见更近许可/NOTICE。GitHub公开指针同许可字节，不当GitHub/ClawHub/GitLab代码同一身份。
 2026-10-29 修改：新增 references/payload-commitment.md 与 scripts/inspect_payload_commitment.py，独立改为显式本地JSON两字符串字段、有界读取/字节身份、分项bool/null与0/1/2结果，不投影载荷/其它metadata。新适配按项目Apache-2.0并保原MIT归属，不声称兼容上游完整CLI或标准认证。
 未执行原程序、不采远端verify、MCP接入、回执/runner生成、签名或core/time/id/provenance/chain/Merkle/anchor全框架。即使字段匹配也不输出完整CONFORMANT、执行/正确性/授权或来源真实性证明；原草案身份及自评向量/检查数不是效果依据。其它独立组件许可不变。
+
+教学 Notebook 骨架：历史上游与中文适配
+来源发布者：OpenAI；最后Skill路径提交作者Vaibhav Srivastav，不冒全文件唯一原创作者。
+https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/jupyter-notebook/SKILL.md
+必要方法：同提交 scripts/new_notebook.py、assets/tutorial-template.ipynb、references/tutorial-patterns.md 与 notebook-structure.md。
+完整原Apache-2.0见 skills/xiyou-tangseng/licenses/jupyter-notebook.txt（技能内licenses/jupyter-notebook.txt），原Gitblob13e25df86ce06eb6488e6a6bc5c5847f5dedc352；完整源树未见该目录更近NOTICE。许可附录的占位版权字样原样保留，不当实际版权署名。
+2026-10-29 修改：中文改编七单元格教学骨架与模板优先方法，新增assets/tutorial-template.json、scripts/create_tutorial_notebook.py及references/tutorial-notebook.md；补唯一合法cell ID，显式新路径、拒覆盖和JSON文件身份。新增适配按项目Apache-2.0。
+旧openai/skills已弃用，仅引用明确开放的历史方法；当前plugins同类路径许可未核，未读其正文、未采用，不代表官方维护或认可。未执行原程序/示例，不采experiment、旧笔记编辑/清理、默认写仓库、自动mkdir、--force或固定实际Python版本。输出只是待填骨架，不作完整schema引擎/Jupyter图形/内核运行或教学效果证明。其它组件许可不变。

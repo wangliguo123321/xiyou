@@ -1,0 +1,95 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "id": "learning-goals",
+      "metadata": {},
+      "source": [
+        "# {{TITLE}}\n",
+        "\n",
+        "这是待填写的教学骨架，尚未完成教程或运行代码。\n",
+        "\n",
+        "- 读者：待填写读者已有的知识。\n",
+        "- 先决条件：待填写所需环境与基础。\n",
+        "- 学习目标：待填写完成后能独立解释或完成的事情。\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "outline",
+      "metadata": {},
+      "source": [
+        "## 提纲\n",
+        "\n",
+        "1. 设置与输入\n",
+        "2. 一个能说明原因的最小例子\n",
+        "3. 变式、常见错误与修正\n",
+        "4. 练习及答案骨架\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "id": "setup",
+      "metadata": {},
+      "source": [
+        "# 待填写：只导入本课所需依赖并准备小规模、可复核的输入。\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "id": "tiny-example-explanation",
+      "metadata": {},
+      "source": [
+        "## 从最小例子开始\n",
+        "\n",
+        "待填写：说明下面的代码要回答什么问题、输入如何影响结果，以及为什么这样写。运行后再解释实际输出。\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "id": "tiny-example",
+      "metadata": {},
+      "source": [
+        "# 待填写：使用上方输入完成一个短小、独立、可核查的例子。\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "id": "exercises",
+      "metadata": {},
+      "source": [
+        "## 练习与变式\n",
+        "\n",
+        "- 待填写：改变一个输入，并先预测结果再核对。\n",
+        "- 待填写：一个常见错误、判断依据与修正办法。\n",
+        "- 待填写：一个可继续探索的方向。\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "id": "answer-scaffold",
+      "metadata": {},
+      "source": [
+        "# 待填写：在此实现练习答案，再对照上方学习目标验证。\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

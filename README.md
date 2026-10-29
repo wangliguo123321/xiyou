@@ -67,6 +67,8 @@ npx skills add wangliguo123321/xiyou --agent codex --skill '*' --global
 
 需要把分支或操作顺序讲清时，唐僧可制作[可编辑的离线 SVG 流程图](skills/xiyou-tangseng/references/flowchart.md)，使用起止、操作、判断等语义图元与显式正交连线。交付前实际渲染核对内容和版面；重复调整标签可沿用同一制作接口，普通问答不强制成图。
 
+需要新建教学 `.ipynb` 时，唐僧可用[中文 Notebook 骨架](skills/xiyou-tangseng/references/tutorial-notebook.md)，保留目标、提纲、小例子与练习的七单元格结构，只写显式全新文件。骨架仍待填写，生成不会执行代码，也不代表教程或内核验证完成。
+
 ```text
 /xiyou-tangseng 解释这个状态为什么一直没有结束，并讲清下次该从哪里排查。
 ```
@@ -217,7 +219,7 @@ xiyou 从已有的优秀方法出发，保留有用的流程，再针对角色�
 
 | 技能与来源记录 | 主要基础 |
 |---|---|
-| [唐僧](skills/xiyou-tangseng/references/lineage.md) | Anthropic 解释式教学、Matt Pocock `teach`；Cathryn Lavery `diagram-design` 的静态流程图制作方法 |
+| [唐僧](skills/xiyou-tangseng/references/lineage.md) | Anthropic 解释式教学、Matt Pocock `teach`；Cathryn Lavery `diagram-design` 的静态流程图制作方法；OpenAI 历史公开教学 Notebook 模板方法 |
 | [悟空](skills/xiyou-wukong/references/lineage.md) | Superpowers `brainstorming`、`systematic-debugging`；HashiCorp Terraform 状态地址盘点（独立 MPL-2.0 法器）；GitHub 社区 workflow 引用观察（保原 MIT 通知）；Microsoft Playwright 网络声明观察；Trail of Bits npm 锁定树声明盘点（独立 CC-BY-SA-4.0 法器） |
 | [哪吒](skills/xiyou-nezha/references/lineage.md) | ECC `iterative-retrieval`、`code-explorer`；`i-have-adhd` 的行动优先表达 |
 | [八戒](skills/xiyou-bajie/references/lineage.md) | Anthropic 代码简化、ECC 复用优先、Matt Pocock 双轴审查、Superpowers 评审建议核验、gstack 范围保持与缩减 |
